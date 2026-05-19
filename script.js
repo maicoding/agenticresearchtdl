@@ -1,38 +1,38 @@
 const stepContent = {
   frage: {
     title: "Frage klären",
-    body: "Eine tragfähige agentische Recherche beginnt mit einem präzisen Auftrag. Ohne Scope produziert das System nur plausible Breite.",
+    body: "Der Auftrag legt fest, was recherchiert werden soll, welche Quellen zählen und was ausgeschlossen ist.",
     output: "Artefakt: Research-Auftrag"
   },
   plan: {
     title: "Suchplan bauen",
-    body: "Der Planner zerlegt die Frage in Teilfragen, Begriffe, Perspektiven und Gegenpositionen. Das macht den späteren Suchweg überprüfbar.",
+    body: "Die Frage wird in Teilfragen, Begriffe, Perspektiven und mögliche Gegenpositionen zerlegt.",
     output: "Artefakt: Suchplan"
   },
   quellen: {
     title: "Quellenraum begrenzen",
-    body: "Der Retriever arbeitet in einem definierten Korpus. Herkunft, Datum, Quellenart und Nutzungsgrenze werden sichtbar mitgeführt.",
+    body: "Das System arbeitet mit einem festgelegten Korpus. Herkunft, Datum, Quellenart und Nutzungsgrenze werden notiert.",
     output: "Artefakt: Quellenliste mit Status"
   },
   analyse: {
     title: "Befunde extrahieren",
-    body: "Der Analyst trennt Kernaussage, Kontext, Methode und möglichen Claim. Eine Quelle wird nicht automatisch zur These.",
+    body: "Kernaussage, Kontext, Methode, Beispiel und möglicher Claim werden getrennt erfasst.",
     output: "Artefakt: Finding-Liste"
   },
   kritik: {
-    title: "Kritik erzwingen",
-    body: "Der Critic sucht Lücken, schwache Evidenz, Anbieterclaims, Zitationsschleifen, Gegenpositionen und zu starke Formulierungen.",
-    output: "Artefakt: Risiko- und Widerspruchsnotiz"
+    title: "Kritik prüfen",
+    body: "Lücken, schwache Evidenz, Anbieterclaims, Zitationsschleifen und Gegenpositionen werden gesucht.",
+    output: "Artefakt: Prüfnotiz"
   },
   synthese: {
-    title: "Arbeitsstand formulieren",
-    body: "Die Synthese verdichtet für eine Zielgruppe, bleibt aber als Arbeitsstand markiert. Sie ersetzt weder Originallektüre noch fachliche Entscheidung.",
+    title: "Arbeitsstand schreiben",
+    body: "Die Ergebnisse werden zusammengefasst. Quellenbezug, Unsicherheit und offene Prüfschritte bleiben erhalten.",
     output: "Artefakt: Research-Notiz"
   },
   review: {
-    title: "Fachlich freigeben",
-    body: "Lehrende oder Forschende prüfen Quellen, Grenzen und Relevanz. Erst danach darf ein Claim in Seminar, Paper, Vortrag oder öffentliche Materialien wandern.",
-    output: "Artefakt: Freigabe, Rückstufung oder neue Recherche"
+    title: "Verwendung entscheiden",
+    body: "Eine Person prüft, was übernommen, zurückgestellt, genauer gelesen oder verworfen wird.",
+    output: "Artefakt: Entscheidungsliste"
   }
 };
 
