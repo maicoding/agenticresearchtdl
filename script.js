@@ -2,7 +2,7 @@ const stepContent = {
   frage: {
     title: "Frage klären",
     body: "Der Auftrag legt fest, was recherchiert werden soll, welche Quellen zählen und was ausgeschlossen ist.",
-    output: "Artefakt: Research-Auftrag"
+    output: "Artefakt: Rechercheauftrag"
   },
   plan: {
     title: "Suchplan bauen",
@@ -27,7 +27,7 @@ const stepContent = {
   synthese: {
     title: "Arbeitsstand schreiben",
     body: "Die Ergebnisse werden zusammengefasst. Quellenbezug, Unsicherheit und offene Prüfschritte bleiben erhalten.",
-    output: "Artefakt: Research-Notiz"
+    output: "Artefakt: Recherche-Notiz"
   },
   review: {
     title: "Verwendung entscheiden",

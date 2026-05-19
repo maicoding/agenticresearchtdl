@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Agentische Recherche: Ablauf und Kontrollpunkte</title>
-    <meta name="description" content="Agentische Recherche als mehrstufiger Rechercheablauf für Lehre, Quellenkritik und wissenschaftliches Arbeiten.">
+    <title>Agentische Recherche: individueller Rechercheablauf</title>
+    <meta name="description" content="Agentische Recherche als automatisierter, individuell prüfbarer Rechercheablauf für Lehre, Quellenkritik und wissenschaftliches Arbeiten.">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -12,6 +12,7 @@
       <a class="brand" href="#top" aria-label="Startseite">Agentic Research</a>
       <nav class="nav" aria-label="Seitennavigation">
         <a href="#prinzip">Prinzip</a>
+        <a href="#automatisierung">Automatisierung</a>
         <a href="#prozess">Prozess</a>
         <a href="#rollen">Rollen</a>
         <a href="#qualitaet">Qualität</a>
@@ -23,17 +24,17 @@
       <section class="intro-section" aria-labelledby="page-title">
         <div class="intro-copy">
           <p class="context-line">Tag der KI-gestützten Lehre · 20. Mai 2026</p>
-          <h1 id="page-title">Agentische Recherche: Ablauf und Kontrollpunkte</h1>
+          <h1 id="page-title">Agentische Recherche: individueller Rechercheablauf</h1>
           <p class="lead">
-            Agentische Recherche ist ein mehrstufiger Rechercheauftrag an ein KI-System. Die Schritte werden getrennt, damit Suchweg, Quellen, Zwischenergebnisse und Entscheidungen überprüfbar bleiben.
+            Agentische Recherche automatisiert einzelne Recherchehandlungen innerhalb eines festgelegten Arbeitskontexts: Suchplan, Quellenabruf, Extraktion, Kritik, Synthese und Ablage. Individuell wird der Lauf durch Fragestellung, Korpus, Prüfkriterien und Ausgabeformat.
           </p>
           <div class="action-row" aria-label="Navigation im Inhalt">
-            <a class="button primary" href="#prozess">Ablauf</a>
+            <a class="button primary" href="#automatisierung">Automatisierung</a>
             <a class="button secondary" href="#demo">Beispielauftrag</a>
           </div>
         </div>
         <figure class="workflow-figure">
-          <img src="assets/agentic-research-loop.svg" alt="Agentic Research Workflow mit Frage, Plan, Quellen, Analyse, Kritik, Synthese, Human Review und Nutzung">
+          <img src="assets/agentic-research-loop.svg" alt="Agentic Research Workflow mit Frage, Plan, Quellen, Analyse, Kritik, Synthese, fachlicher Prüfung und Nutzung">
         </figure>
       </section>
 
@@ -61,6 +62,56 @@
               <li>Verwendung erfolgt erst nach fachlicher Prüfung.</li>
             </ul>
           </article>
+        </div>
+      </section>
+
+      <section id="automatisierung" class="automation-section" aria-labelledby="automation-title">
+        <div class="section-heading">
+          <p class="section-kicker">Automatisierung</p>
+          <h2 id="automation-title">Ein Recherchelauf braucht vier Vorgaben: Frage, Quellenraum, Prüfkriterien und Ausgabe.</h2>
+        </div>
+        <div class="automation-layout">
+          <article class="automation-note">
+            <h3>Was automatisiert wird</h3>
+            <p>
+              Das System übernimmt wiederholbare Arbeitsschritte: Teilfragen bilden, Quellen abrufen, Befunde in ein Schema schreiben, Widersprüche markieren, offene Prüfpunkte sammeln und eine Arbeitsnotiz erzeugen.
+            </p>
+            <p>
+              Es entscheidet nicht, welche Aussagen wissenschaftlich verwendet werden. Diese Entscheidung bleibt bei der fachlichen Prüfung.
+            </p>
+          </article>
+          <div class="automation-grid" aria-label="Bestandteile eines individuellen Recherchelaufs">
+            <article>
+              <span>01</span>
+              <h3>Fokus</h3>
+              <p>Fragestellung, Kurs, Projekt, Zeitraum, Begriffe und Ausschlüsse.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Korpus</h3>
+              <p>Eigene PDFs, Notizen, Links, Datenbanken, Transkripte oder Kursmaterialien.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Rhythmus</h3>
+              <p>Einmaliger Lauf, wöchentliche Aktualisierung oder Prüfung vor einer Sitzung.</p>
+            </article>
+            <article>
+              <span>04</span>
+              <h3>Schema</h3>
+              <p>Quellenstatus, Evidenztyp, Aussagekandidat, Gegenposition und offene Frage.</p>
+            </article>
+            <article>
+              <span>05</span>
+              <h3>Prüfung</h3>
+              <p>Übernehmen, genauer lesen, beobachten, verwerfen oder neu beauftragen.</p>
+            </article>
+            <article>
+              <span>06</span>
+              <h3>Ablage</h3>
+              <p>Geprüfte Ergebnisse wandern in Vault, Seminarplan, Artikelnotiz oder Materialsammlung.</p>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -116,7 +167,7 @@
       <section class="workflow-section" aria-labelledby="workflow-title">
         <div class="section-heading">
           <p class="section-kicker">Zwischenergebnisse</p>
-          <h2 id="workflow-title">Jeder Schritt erzeugt ein anderes Arbeitsdokument.</h2>
+          <h2 id="workflow-title">Jeder Schritt erzeugt ein prüfbares Arbeitsdokument.</h2>
         </div>
         <div class="workflow-board">
           <div class="step-list" role="tablist" aria-label="Workflow-Schritte">
@@ -126,12 +177,12 @@
             <button class="step" type="button" role="tab" aria-selected="false" data-step="analyse">Analyse</button>
             <button class="step" type="button" role="tab" aria-selected="false" data-step="kritik">Kritik</button>
             <button class="step" type="button" role="tab" aria-selected="false" data-step="synthese">Synthese</button>
-            <button class="step" type="button" role="tab" aria-selected="false" data-step="review">Review</button>
+            <button class="step" type="button" role="tab" aria-selected="false" data-step="review">Prüfung</button>
           </div>
           <article class="step-detail" aria-live="polite">
             <h3 id="step-title">Frage klären</h3>
             <p id="step-body">Der Auftrag legt fest, was recherchiert werden soll, welche Quellen zählen und was ausgeschlossen ist.</p>
-            <p id="step-output" class="output-line">Artefakt: Research-Auftrag</p>
+            <p id="step-output" class="output-line">Artefakt: Rechercheauftrag</p>
           </article>
         </div>
       </section>
@@ -163,7 +214,7 @@
             <p>fasst Ergebnisse für eine Zielgruppe zusammen und markiert Grenzen.</p>
           </article>
           <article>
-            <h3>Human Reviewer</h3>
+            <h3>Fachliche Prüfung</h3>
             <p>entscheidet, welche Aussagen verwendet werden dürfen.</p>
           </article>
         </div>
@@ -225,7 +276,7 @@
         </div>
       </section>
 
-      <section class="review-strip" aria-label="Human Review Leitsatz">
+      <section class="review-strip" aria-label="Leitsatz zur fachlichen Prüfung">
         <blockquote>
           <span>Das System bereitet Recherche vor.</span>
           <strong>Die fachliche Entscheidung bleibt menschlich.</strong>
@@ -238,30 +289,35 @@
           <h2 id="demo-title">Ein Beispielauftrag für einen Recherchelauf</h2>
         </div>
         <div class="prompt-box">
-          <pre><code>Untersuche, wie KI-gestützte Recherche im wissenschaftlichen Arbeiten verantwortbar eingesetzt werden kann.
+          <pre><code>Thema: [eigene Fragestellung]
+Kontext: [Seminar / Forschungsprojekt / Lehrveranstaltung]
+Korpus: [eigene PDFs, Notizen, Links, Datenbanken, Kursmaterialien]
+Rhythmus: [einmalig / wöchentlich / vor jeder Sitzung]
+Ausgabe: [Recherche-Notiz / Quellenkarte / Claim-Matrix / offene Fragen]
 
-Erstelle keinen fertigen Leitfaden, sondern einen prüfbaren Arbeitsstand.
-Zerlege die Frage in Teilfragen und Suchachsen.
-Trenne Signal, Interpretation und Evidenz.
-Priorisiere Primärquellen, Forschung und Hochschulmaterialien.
-Suche Gegenpositionen, Lücken und methodische Unsicherheiten.
-Markiere Quellenstatus, Evidenztyp und Relevanz für Lehre.
-Formuliere Claims nur als Kandidaten, nicht als freigegebene Aussagen.
-Schließe mit: integrieren / beobachten / verwerfen.</code></pre>
+Aufgabe:
+1. Zerlege die Frage in Teilfragen und Suchachsen.
+2. Nutze zuerst den angegebenen Korpus; markiere externe Ergänzungen.
+3. Extrahiere Kernaussagen, Methoden, Begriffe, Beispiele und mögliche Claims.
+4. Trenne Signal, Interpretation und Evidenz.
+5. Suche Gegenpositionen, Lücken und methodische Unsicherheiten.
+6. Vergib Quellenstatus, Evidenztyp und Relevanz.
+7. Erstelle eine Prüfliste: übernehmen / genauer lesen / beobachten / verwerfen.
+8. Schreibe den Arbeitsstand mit Quellenbezug zurück; markiere alles als nicht freigegeben, bis die fachliche Prüfung erfolgt.</code></pre>
           <button class="copy-button" type="button" data-copy>Prompt kopieren</button>
         </div>
       </section>
 
       <section class="closing-section" aria-labelledby="closing-title">
-        <h2 id="closing-title">Freigabe vor Verwendung</h2>
+        <h2 id="closing-title">Ablage nach Prüfung</h2>
         <p>
-          Vor der Verwendung wird geprüft: Quelle vorhanden, Aussage begrenzt, Gegenposition gesucht, Unsicherheit markiert.
+          Nutzbar wird der Lauf durch die geprüfte Ablage: Quelle, Befund, Grenze, Status und nächste Entscheidung bleiben zusammen.
         </p>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>Agentic Research · Für Lehre, Quellenkritik und wissenschaftliches Arbeiten</p>
+      <p>Agentic Research · Individuelle Recherche, Quellenkritik und wissenschaftliches Arbeiten</p>
     </footer>
 
     <script src="script.js"></script>
