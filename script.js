@@ -16,12 +16,12 @@ const stepContent = {
   },
   analyse: {
     title: "Befunde extrahieren",
-    body: "Kernaussage, Kontext, Methode, Beispiel und möglicher Claim werden getrennt erfasst.",
-    output: "Artefakt: Finding-Liste"
+    body: "Kernaussage, Kontext, Methode, Beispiel und möglicher Aussagekandidat werden getrennt erfasst.",
+    output: "Artefakt: Fundstellenliste"
   },
   kritik: {
     title: "Kritik prüfen",
-    body: "Lücken, schwache Evidenz, Anbieterclaims, Zitationsschleifen und Gegenpositionen werden gesucht.",
+    body: "Lücken, schwache Evidenz, Anbieteraussagen, Zitationsschleifen und Gegenpositionen werden gesucht.",
     output: "Artefakt: Prüfnotiz"
   },
   synthese: {

@@ -13,10 +13,10 @@
       <nav class="nav" aria-label="Seitennavigation">
         <a href="#prinzip">Prinzip</a>
         <a href="#automatisierung">Automatisierung</a>
-        <a href="#prozess">Prozess</a>
-        <a href="#rollen">Rollen</a>
+        <a href="#einrichtung">Einrichtung</a>
+        <a href="#arbeitsablauf">Arbeitsablauf</a>
         <a href="#qualitaet">Qualität</a>
-        <a href="#demo">Demo</a>
+        <a href="#demo">Auftrag</a>
       </nav>
     </header>
 
@@ -29,12 +29,12 @@
             Agentische Recherche automatisiert einzelne Recherchehandlungen innerhalb eines festgelegten Arbeitskontexts: Suchplan, Quellenabruf, Extraktion, Kritik, Synthese und Ablage. Individuell wird der Lauf durch Fragestellung, Korpus, Prüfkriterien und Ausgabeformat.
           </p>
           <div class="action-row" aria-label="Navigation im Inhalt">
-            <a class="button primary" href="#automatisierung">Automatisierung</a>
-            <a class="button secondary" href="#demo">Beispielauftrag</a>
+            <a class="button primary" href="#einrichtung">Einrichtung</a>
+            <a class="button secondary" href="#arbeitsablauf">Arbeitsablauf</a>
           </div>
         </div>
         <figure class="workflow-figure">
-          <img src="assets/agentic-research-loop.svg" alt="Agentic Research Workflow mit Frage, Plan, Quellen, Analyse, Kritik, Synthese, fachlicher Prüfung und Nutzung">
+          <img src="assets/agentic-research-loop.svg" alt="Arbeitsablauf mit Frage, Plan, Quellen, Analyse, Kritik, Synthese, fachlicher Prüfung und Nutzung">
         </figure>
       </section>
 
@@ -115,51 +115,156 @@
         </div>
       </section>
 
-      <section id="prozess" class="process-section" aria-labelledby="process-title">
+      <section id="einrichtung" class="setup-section" aria-labelledby="setup-title">
         <div class="section-heading">
-          <p class="section-kicker">Ablauf</p>
-          <h2 id="process-title">Ein Rechercheauftrag wird in acht Arbeitsschritte zerlegt.</h2>
+          <p class="section-kicker">Einrichtung</p>
+          <h2 id="setup-title">Vor dem ersten Lauf werden Arbeitsraum, Quellen und Ausgabeformat festgelegt.</h2>
         </div>
-        <div class="process-map" aria-label="Agentic Research Prozess">
+        <div class="setup-layout">
+          <article class="setup-minimum">
+            <h3>Minimaler Start</h3>
+            <p>
+              Für einen ersten Recherchelauf reicht ein Projektordner mit Quellen, einem Auftrag, einem Ausgabeschema und einer Prüfliste. Die wiederkehrende Automatisierung kann danach ergänzt werden.
+            </p>
+            <dl class="folder-list">
+              <dt>01_quellen/</dt>
+              <dd>PDFs, Links, Exporte, eigene Notizen.</dd>
+              <dt>02_auftraege/</dt>
+              <dd>Fragestellung, Rahmen, Ausschlüsse, gewünschte Tiefe.</dd>
+              <dt>03_arbeitsstaende/</dt>
+              <dd>vom System erzeugte Notizen, Quellenlisten, Matrizen.</dd>
+              <dt>04_pruefung/</dt>
+              <dd>fachliche Prüfung, Entscheidungen, offene Punkte.</dd>
+            </dl>
+          </article>
+          <div class="setup-steps" aria-label="Schritte zur Einrichtung">
+            <article>
+              <span>01</span>
+              <h3>Arbeitsraum anlegen</h3>
+              <p>Ein Vault, Kursordner oder Projektordner wird zur gemeinsamen Ablage für Quellen und Arbeitsstände.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Quellenraum begrenzen</h3>
+              <p>Es wird notiert, welche Ordner, Datenbanken, Webseiten oder Literaturverwaltungen verwendet werden dürfen.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Rechercheprofil schreiben</h3>
+              <p>Thema, Kurskontext, Zielgruppe, Suchbegriffe, Gegenpositionen und Ausschlussregeln werden als Auftrag gespeichert.</p>
+            </article>
+            <article>
+              <span>04</span>
+              <h3>Ausgabeformat festlegen</h3>
+              <p>Vorab wird entschieden, ob eine Quellenkarte, Aussage-Evidenz-Matrix, Recherche-Notiz oder Liste offener Fragen entstehen soll.</p>
+            </article>
+            <article>
+              <span>05</span>
+              <h3>Auslöser wählen</h3>
+              <p>Der Lauf startet manuell, nach neuen Dateien im Quellenordner, wöchentlich oder vor einer Sitzung.</p>
+            </article>
+            <article>
+              <span>06</span>
+              <h3>Prüfung festlegen</h3>
+              <p>Es wird bestimmt, wer prüft und welche Kriterien erfüllt sein müssen, bevor Material verwendet wird.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="arbeitsablauf" class="process-section" aria-labelledby="process-title">
+        <div class="section-heading">
+          <p class="section-kicker">Arbeitsablauf</p>
+          <h2 id="process-title">Ein automatisierter Lauf arbeitet immer mit Input, Zwischenergebnis und Prüfung.</h2>
+        </div>
+        <div class="process-map" aria-label="Arbeitsablauf eines automatisierten Recherchelaufs">
           <article>
             <span>01</span>
-            <h3>Auftrag formulieren</h3>
-            <p>Recherchefrage, Zielgruppe, Tiefe, Quellenarten und Ausschlusskriterien werden festgelegt.</p>
+            <h3>Auftrag lesen</h3>
+            <p>Das System liest Rechercheprofil, Quellenraum, Ausgabeformat und Prüfkriterien.</p>
+            <dl class="artifact-pair">
+              <dt>Input</dt>
+              <dd>Rechercheauftrag</dd>
+              <dt>Ergebnis</dt>
+              <dd>Suchplan</dd>
+            </dl>
           </article>
           <article>
             <span>02</span>
-            <h3>Teilfragen planen</h3>
-            <p>Die Frage wird in Begriffe, Perspektiven, Gegenpositionen und Anwendungsfelder zerlegt.</p>
+            <h3>Suchachsen bilden</h3>
+            <p>Die Fragestellung wird in Teilfragen, Begriffe, Perspektiven und Gegenpositionen zerlegt.</p>
+            <dl class="artifact-pair">
+              <dt>Input</dt>
+              <dd>Thema und Rahmen</dd>
+              <dt>Ergebnis</dt>
+              <dd>Suchachsen</dd>
+            </dl>
           </article>
           <article>
             <span>03</span>
-            <h3>Korpus bestimmen</h3>
-            <p>Es wird festgelegt, welche Quellen verwendet werden: PDFs, Datenbanken, Webseiten, Notizen oder Kursmaterial.</p>
+            <h3>Quellen abrufen</h3>
+            <p>Der festgelegte Korpus wird durchsucht. Externe Ergänzungen werden als solche markiert.</p>
+            <dl class="artifact-pair">
+              <dt>Input</dt>
+              <dd>PDFs, Links, Datenbanken</dd>
+              <dt>Ergebnis</dt>
+              <dd>Quellenliste mit Status</dd>
+            </dl>
           </article>
           <article>
             <span>04</span>
-            <h3>Quellen abrufen</h3>
-            <p>Material wird gesammelt. Herkunft, Datum, Quellenart und Nutzungsgrenze werden festgehalten.</p>
+            <h3>Befunde extrahieren</h3>
+            <p>Kernaussagen, Methoden, Begriffe, Beispiele und Aussagekandidaten werden getrennt erfasst.</p>
+            <dl class="artifact-pair">
+              <dt>Input</dt>
+              <dd>markierte Quellen</dd>
+              <dt>Ergebnis</dt>
+              <dd>Fundstellenliste</dd>
+            </dl>
           </article>
           <article>
             <span>05</span>
-            <h3>Befunde extrahieren</h3>
-            <p>Kernaussagen, Begriffe, Methoden, Beispiele und mögliche Claims werden aus den Quellen extrahiert.</p>
+            <h3>Kritiklauf ausführen</h3>
+            <p>Das System sucht Lücken, schwache Evidenz, Anbieterinteressen, Zitationsschleifen und Gegenargumente.</p>
+            <dl class="artifact-pair">
+              <dt>Input</dt>
+              <dd>Fundstellenliste</dd>
+              <dt>Ergebnis</dt>
+              <dd>Prüfnotiz</dd>
+            </dl>
           </article>
           <article>
             <span>06</span>
-            <h3>Kritik prüfen</h3>
-            <p>Es wird nach Lücken, schwacher Evidenz, Anbieterinteressen, Zitationsschleifen und Gegenargumenten gesucht.</p>
+            <h3>Arbeitsstand schreiben</h3>
+            <p>Die Ergebnisse werden zusammengeführt. Unsicherheiten, Quellenbezug und offene Punkte bleiben sichtbar.</p>
+            <dl class="artifact-pair">
+              <dt>Input</dt>
+              <dd>Quellenliste und Prüfnotiz</dd>
+              <dt>Ergebnis</dt>
+              <dd>Recherche-Notiz</dd>
+            </dl>
           </article>
           <article>
             <span>07</span>
-            <h3>Synthese schreiben</h3>
-            <p>Die Ergebnisse werden als Arbeitsstand zusammengefasst. Unsicherheiten und offene Prüfschritte bleiben erhalten.</p>
+            <h3>Fachlich prüfen</h3>
+            <p>Eine Person entscheidet, was übernommen, genauer gelesen, beobachtet, verworfen oder neu beauftragt wird.</p>
+            <dl class="artifact-pair">
+              <dt>Input</dt>
+              <dd>Recherche-Notiz</dd>
+              <dt>Ergebnis</dt>
+              <dd>Entscheidungsliste</dd>
+            </dl>
           </article>
           <article>
             <span>08</span>
-            <h3>Verwendung entscheiden</h3>
-            <p>Eine Person prüft, was übernommen, zurückgestellt, genauer gelesen oder verworfen wird.</p>
+            <h3>Zurückschreiben</h3>
+            <p>Geprüfte Ergebnisse werden in Vault, Seminarplan, Materialsammlung oder Manuskript übernommen.</p>
+            <dl class="artifact-pair">
+              <dt>Input</dt>
+              <dd>Entscheidungsliste</dd>
+              <dt>Ergebnis</dt>
+              <dd>aktualisierter Arbeitsraum</dd>
+            </dl>
           </article>
         </div>
       </section>
@@ -170,7 +275,7 @@
           <h2 id="workflow-title">Jeder Schritt erzeugt ein prüfbares Arbeitsdokument.</h2>
         </div>
         <div class="workflow-board">
-          <div class="step-list" role="tablist" aria-label="Workflow-Schritte">
+          <div class="step-list" role="tablist" aria-label="Arbeitsschritte">
             <button class="step active" type="button" role="tab" aria-selected="true" data-step="frage">Frage</button>
             <button class="step" type="button" role="tab" aria-selected="false" data-step="plan">Plan</button>
             <button class="step" type="button" role="tab" aria-selected="false" data-step="quellen">Quellen</button>
@@ -203,7 +308,7 @@
           </article>
           <article>
             <h3>Analyst</h3>
-            <p>extrahiert Aussagen, Begriffe, Methoden, Beispiele und mögliche Claims.</p>
+            <p>extrahiert Aussagen, Begriffe, Methoden, Beispiele und mögliche Aussagekandidaten.</p>
           </article>
           <article>
             <h3>Critic</h3>
@@ -271,7 +376,7 @@
           </article>
           <article>
             <h3>Wissenschaftliches Schreiben</h3>
-            <p>Claims werden mit Quelle, Evidenzgrenze und Unsicherheit verbunden.</p>
+            <p>Aussagen werden mit Quelle, Evidenzgrenze und Unsicherheit verbunden.</p>
           </article>
         </div>
       </section>
@@ -293,12 +398,12 @@
 Kontext: [Seminar / Forschungsprojekt / Lehrveranstaltung]
 Korpus: [eigene PDFs, Notizen, Links, Datenbanken, Kursmaterialien]
 Rhythmus: [einmalig / wöchentlich / vor jeder Sitzung]
-Ausgabe: [Recherche-Notiz / Quellenkarte / Claim-Matrix / offene Fragen]
+Ausgabe: [Recherche-Notiz / Quellenkarte / Aussage-Evidenz-Matrix / offene Fragen]
 
 Aufgabe:
 1. Zerlege die Frage in Teilfragen und Suchachsen.
 2. Nutze zuerst den angegebenen Korpus; markiere externe Ergänzungen.
-3. Extrahiere Kernaussagen, Methoden, Begriffe, Beispiele und mögliche Claims.
+3. Extrahiere Kernaussagen, Methoden, Begriffe, Beispiele und mögliche Aussagekandidaten.
 4. Trenne Signal, Interpretation und Evidenz.
 5. Suche Gegenpositionen, Lücken und methodische Unsicherheiten.
 6. Vergib Quellenstatus, Evidenztyp und Relevanz.

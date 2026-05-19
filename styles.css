@@ -88,6 +88,7 @@ main {
 .intro-section,
 .band,
 .automation-section,
+.setup-section,
 .process-section,
 .workflow-section,
 .quality-section,
@@ -225,6 +226,7 @@ h3 {
 .use-grid,
 .role-grid,
 .automation-grid,
+.setup-steps,
 .two-column {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -245,6 +247,8 @@ h3 {
 .role-grid article,
 .automation-note,
 .automation-grid article,
+.setup-minimum,
+.setup-steps article,
 .setup-timeline article,
 .step-detail,
 .prompt-box,
@@ -260,6 +264,8 @@ h3 {
 .role-grid article,
 .automation-note,
 .automation-grid article,
+.setup-minimum,
+.setup-steps article,
 .two-column > div {
   padding: 24px;
 }
@@ -410,6 +416,76 @@ li + li {
   color: var(--muted);
 }
 
+.setup-section {
+  background: var(--surface);
+}
+
+.setup-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.82fr) minmax(0, 1.5fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.setup-minimum {
+  background: var(--soft-blue);
+}
+
+.setup-minimum p {
+  color: oklch(30% 0.02 235);
+}
+
+.folder-list,
+.artifact-pair {
+  margin: 22px 0 0;
+}
+
+.folder-list dt,
+.artifact-pair dt {
+  margin-top: 14px;
+  font-weight: 820;
+}
+
+.folder-list dt:first-child,
+.artifact-pair dt:first-child {
+  margin-top: 0;
+}
+
+.folder-list dd,
+.artifact-pair dd {
+  color: var(--muted);
+}
+
+.setup-steps {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.setup-steps article {
+  min-height: 210px;
+}
+
+.setup-steps span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  margin-bottom: 24px;
+  border-radius: 50%;
+  background: var(--soft-rust);
+  color: var(--rust);
+  font-weight: 820;
+}
+
+.setup-steps article:nth-child(even) span {
+  background: var(--soft-teal);
+  color: var(--teal);
+}
+
+.setup-steps p {
+  color: var(--muted);
+}
+
 .review-strip {
   padding: 54px clamp(20px, 5vw, 72px);
   background: var(--ink);
@@ -497,7 +573,7 @@ pre {
 }
 
 .process-map article {
-  min-height: 245px;
+  min-height: 345px;
   padding: 22px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -529,6 +605,7 @@ pre {
 }
 
 .process-map p,
+.process-map dd,
 .role-grid p,
 .quality-layout p,
 .quality-layout dd {
@@ -616,6 +693,8 @@ dd {
   .role-grid,
   .automation-grid,
   .automation-layout,
+  .setup-layout,
+  .setup-steps,
   .two-column,
   .workflow-board,
   .setup-timeline,
@@ -637,6 +716,7 @@ dd {
   .intro-section,
   .band,
   .automation-section,
+  .setup-section,
   .workflow-section,
   .process-section,
   .quality-section,
