@@ -1,38 +1,38 @@
 const stepContent = {
   frage: {
     title: "Frage klären",
-    body: "Die Recherche beginnt mit einer präzisen Arbeitsfrage: Thema, Zielgruppe, Erkenntnisinteresse, Quellenarten und Ausschlusskriterien werden benannt.",
-    output: "Output: Research-Auftrag"
+    body: "Eine tragfähige agentische Recherche beginnt mit einem präzisen Auftrag. Ohne Scope produziert das System nur plausible Breite.",
+    output: "Artefakt: Research-Auftrag"
   },
   plan: {
     title: "Suchplan bauen",
-    body: "Das System zerlegt die Frage in Teilfragen und Suchachsen. Dadurch wird sichtbar, welche Aspekte geprüft werden müssen und welche Quellenarten dafür geeignet sind.",
-    output: "Output: Teilfragen und Suchstrategie"
+    body: "Der Planner zerlegt die Frage in Teilfragen, Begriffe, Perspektiven und Gegenpositionen. Das macht den späteren Suchweg überprüfbar.",
+    output: "Artefakt: Suchplan"
   },
   quellen: {
-    title: "Quellenkorpus aufbauen",
-    body: "PDFs, Webseiten, Literaturdaten, Notizen oder Kursmaterialien werden nicht nur gesammelt, sondern mit Herkunft, Datum, Quellenart und Nutzungsgrenze erfasst.",
-    output: "Output: Quellenkorpus mit Status"
+    title: "Quellenraum begrenzen",
+    body: "Der Retriever arbeitet in einem definierten Korpus. Herkunft, Datum, Quellenart und Nutzungsgrenze werden sichtbar mitgeführt.",
+    output: "Artefakt: Quellenliste mit Status"
   },
   analyse: {
     title: "Befunde extrahieren",
-    body: "Der Analyse-Schritt trennt Kernaussage, Kontext und möglichen Claim. Eine Quelle wird nicht automatisch zur fertigen These.",
-    output: "Output: Findings und Claim-Kandidaten"
+    body: "Der Analyst trennt Kernaussage, Kontext, Methode und möglichen Claim. Eine Quelle wird nicht automatisch zur These.",
+    output: "Artefakt: Finding-Liste"
   },
   kritik: {
     title: "Kritik erzwingen",
-    body: "Der Critic-Schritt sucht Lücken, schwache Evidenz, Anbieterclaims, Zitationsschleifen, Gegenpositionen und Stellen, an denen eine Formulierung stärker ist als der Beleg.",
-    output: "Output: Risiken, Lücken, Gegenfragen"
+    body: "Der Critic sucht Lücken, schwache Evidenz, Anbieterclaims, Zitationsschleifen, Gegenpositionen und zu starke Formulierungen.",
+    output: "Artefakt: Risiko- und Widerspruchsnotiz"
   },
   synthese: {
     title: "Arbeitsstand formulieren",
     body: "Die Synthese verdichtet für eine Zielgruppe, bleibt aber als Arbeitsstand markiert. Sie ersetzt weder Originallektüre noch fachliche Entscheidung.",
-    output: "Output: Research-Notiz"
+    output: "Artefakt: Research-Notiz"
   },
   review: {
     title: "Fachlich freigeben",
     body: "Lehrende oder Forschende prüfen Quellen, Grenzen und Relevanz. Erst danach darf ein Claim in Seminar, Paper, Vortrag oder öffentliche Materialien wandern.",
-    output: "Output: Freigabe, Rückstufung oder neue Recherche"
+    output: "Artefakt: Freigabe, Rückstufung oder neue Recherche"
   }
 };
 
