@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Agentische Recherche: individueller Rechercheablauf</title>
-    <meta name="description" content="Agentische Recherche als automatisierter, individuell prüfbarer Rechercheablauf für Lehre, Quellenkritik und wissenschaftliches Arbeiten.">
+    <title>Ein Agentic-Research-System bauen</title>
+    <meta name="description" content="Bauteile, Einrichtung, Durchlauf und Vorteile eines Agentic-Research-Systems für Lehre und wissenschaftliches Arbeiten.">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -12,10 +12,10 @@
       <a class="brand" href="#top" aria-label="Startseite">Agentic Research</a>
       <nav class="nav" aria-label="Seitennavigation">
         <a href="#prinzip">Prinzip</a>
-        <a href="#automatisierung">Automatisierung</a>
+        <a href="#bauteile">Bauteile</a>
         <a href="#einrichtung">Einrichtung</a>
-        <a href="#arbeitsablauf">Arbeitsablauf</a>
-        <a href="#nutzen">Nutzen</a>
+        <a href="#arbeitsablauf">Durchlauf</a>
+        <a href="#vorteile">Vorteile</a>
         <a href="#qualitaet">Qualität</a>
         <a href="#demo">Auftrag</a>
       </nav>
@@ -25,13 +25,13 @@
       <section class="intro-section" aria-labelledby="page-title">
         <div class="intro-copy">
           <p class="context-line">Tag der KI-gestützten Lehre · 20. Mai 2026</p>
-          <h1 id="page-title">Agentische Recherche: individueller Rechercheablauf</h1>
+          <h1 id="page-title">Ein Agentic-Research-System bauen</h1>
           <p class="lead">
-            Agentische Recherche automatisiert einzelne Recherchehandlungen innerhalb eines festgelegten Arbeitskontexts: Suchplan, Quellenabruf, Extraktion, Kritik, Synthese und Ablage. Individuell wird der Lauf durch Fragestellung, Korpus, Prüfkriterien und Ausgabeformat.
+            Ein solches System besteht aus einem Arbeitsraum, einem Quellenkorpus, einem gespeicherten Rechercheauftrag, festen Ausgabeformaten und einer Prüfung. Die Automation wiederholt den Ablauf und schreibt Arbeitsstände zurück. Freigegeben wird erst nach fachlicher Entscheidung.
           </p>
           <div class="action-row" aria-label="Navigation im Inhalt">
-            <a class="button primary" href="#einrichtung">Einrichtung</a>
-            <a class="button secondary" href="#arbeitsablauf">Arbeitsablauf</a>
+            <a class="button primary" href="#bauteile">Bauteile</a>
+            <a class="button secondary" href="#arbeitsablauf">Durchlauf</a>
           </div>
         </div>
         <figure class="workflow-figure">
@@ -42,75 +42,75 @@
       <section id="prinzip" class="band" aria-labelledby="principle-title">
         <div class="section-heading">
           <p class="section-kicker">Prinzip</p>
-          <h2 id="principle-title">Eine direkte Abfrage erzeugt Antworttext. Ein agentischer Lauf erzeugt Arbeitsmaterial.</h2>
+          <h2 id="principle-title">Der Unterschied liegt nicht im Modell, sondern in der Arbeitsumgebung.</h2>
         </div>
         <div class="comparison-grid">
           <article>
-            <h3>Chat-Abfrage</h3>
+            <h3>Einzelprompt</h3>
             <ul>
-              <li>Die Antwort kommt direkt nach der Frage.</li>
-              <li>Suchweg und Auswahlkriterien sind oft nicht erkennbar.</li>
-              <li>Quellenprüfung muss separat nachgeholt werden.</li>
-              <li>Die Formulierung kann sicherer wirken als die Quellenlage.</li>
+              <li>Frage und Antwort stehen im Chat.</li>
+              <li>Der verwendete Quellenraum ist nicht stabil.</li>
+              <li>Zwischenschritte werden selten gespeichert.</li>
+              <li>Eine spätere Wiederholung ist schwer vergleichbar.</li>
             </ul>
           </article>
           <article>
-            <h3>Agentische Recherche</h3>
+            <h3>Research-System</h3>
             <ul>
-              <li>Die Frage wird in einzelne Rechercheaufgaben zerlegt.</li>
-              <li>Quellen werden mit Herkunft und Status dokumentiert.</li>
-              <li>Analyse und Kritik sind getrennte Schritte.</li>
-              <li>Verwendung erfolgt erst nach fachlicher Prüfung.</li>
+              <li>Auftrag, Quellenraum und Ausgaben sind vorher festgelegt.</li>
+              <li>Der Lauf erzeugt Suchplan, Quellenliste, Prüfnotiz und Arbeitsstand.</li>
+              <li>Entscheidungen werden als eigene Datei oder Liste gespeichert.</li>
+              <li>Der gleiche Auftrag kann später erneut laufen.</li>
             </ul>
           </article>
         </div>
       </section>
 
-      <section id="automatisierung" class="automation-section" aria-labelledby="automation-title">
+      <section id="bauteile" class="automation-section" aria-labelledby="automation-title">
         <div class="section-heading">
-          <p class="section-kicker">Automatisierung</p>
-          <h2 id="automation-title">Ein Recherchelauf braucht vier Vorgaben: Frage, Quellenraum, Prüfkriterien und Ausgabe.</h2>
+          <p class="section-kicker">Bauteile</p>
+          <h2 id="automation-title">Das System besteht aus Ordnern, Vorlagen, einem Lauf und einer Prüfstelle.</h2>
         </div>
         <div class="automation-layout">
           <article class="automation-note">
-            <h3>Was automatisiert wird</h3>
+            <h3>Minimaler Aufbau</h3>
             <p>
-              Das System übernimmt wiederholbare Arbeitsschritte: Teilfragen bilden, Quellen abrufen, Befunde in ein Schema schreiben, Widersprüche markieren, offene Prüfpunkte sammeln und eine Arbeitsnotiz erzeugen.
+              Es braucht kein komplexes Toolset. Entscheidend ist, dass Eingaben, Zwischenergebnisse und Entscheidungen getrennt abgelegt werden.
             </p>
             <p>
-              Es entscheidet nicht, welche Aussagen wissenschaftlich verwendet werden. Diese Entscheidung bleibt bei der fachlichen Prüfung.
+              Der wiederkehrende Lauf wird erst nach einem manuellen Testlauf eingerichtet.
             </p>
           </article>
-          <div class="automation-grid" aria-label="Bestandteile eines individuellen Recherchelaufs">
+          <div class="automation-grid" aria-label="Bauteile eines Agentic-Research-Systems">
             <article>
               <span>01</span>
-              <h3>Fokus</h3>
-              <p>Fragestellung, Kurs, Projekt, Zeitraum, Begriffe und Ausschlüsse.</p>
+              <h3>Arbeitsraum</h3>
+              <p>Ein Vault, Kursordner oder Repository mit Quellen, Aufträgen, Arbeitsständen und Prüfung.</p>
             </article>
             <article>
               <span>02</span>
-              <h3>Korpus</h3>
-              <p>Eigene PDFs, Notizen, Links, Datenbanken, Transkripte oder Kursmaterialien.</p>
+              <h3>Quellenkorpus</h3>
+              <p>PDFs, Links, Datenbankexporte, Notizen, Transkripte oder Kursmaterialien mit klarer Grenze.</p>
             </article>
             <article>
               <span>03</span>
-              <h3>Rhythmus</h3>
-              <p>Einmaliger Lauf, wöchentliche Aktualisierung oder Prüfung vor einer Sitzung.</p>
+              <h3>Rechercheauftrag</h3>
+              <p>Thema, Kontext, Ausschlüsse, Suchachsen, gewünschte Tiefe und Stoppregeln.</p>
             </article>
             <article>
               <span>04</span>
-              <h3>Schema</h3>
-              <p>Quellenstatus, Evidenztyp, Aussagekandidat, Gegenposition und offene Frage.</p>
+              <h3>Ausgabevorlagen</h3>
+              <p>Quellenkarte, Aussage-Evidenz-Matrix, Prüfnotiz, Recherche-Notiz oder offene Fragen.</p>
             </article>
             <article>
               <span>05</span>
-              <h3>Prüfung</h3>
-              <p>Übernehmen, genauer lesen, beobachten, verwerfen oder neu beauftragen.</p>
+              <h3>Agentenlauf</h3>
+              <p>Der Lauf liest Auftrag und Korpus, extrahiert Befunde und schreibt strukturierte Dateien.</p>
             </article>
             <article>
               <span>06</span>
-              <h3>Ablage</h3>
-              <p>Geprüfte Ergebnisse wandern in Vault, Seminarplan, Artikelnotiz oder Materialsammlung.</p>
+              <h3>Prüfstelle</h3>
+              <p>Eine Person entscheidet: übernehmen, genauer lesen, beobachten, verwerfen oder neu beauftragen.</p>
             </article>
           </div>
         </div>
@@ -119,13 +119,13 @@
       <section id="einrichtung" class="setup-section" aria-labelledby="setup-title">
         <div class="section-heading">
           <p class="section-kicker">Einrichtung</p>
-          <h2 id="setup-title">Vor dem ersten Lauf werden Arbeitsraum, Quellen und Ausgabeformat festgelegt.</h2>
+          <h2 id="setup-title">So wird das System aufgebaut.</h2>
         </div>
         <div class="setup-layout">
           <article class="setup-minimum">
-            <h3>Minimaler Start</h3>
+            <h3>Ordnerstruktur</h3>
             <p>
-              Für einen ersten Recherchelauf reicht ein Projektordner mit Quellen, einem Auftrag, einem Ausgabeschema und einer Prüfliste. Die wiederkehrende Automatisierung kann danach ergänzt werden.
+              Die Ordnernamen sind austauschbar. Wichtig ist die Trennung: Rohmaterial, Auftrag, Arbeitsstand, Prüfung.
             </p>
             <dl class="folder-list">
               <dt>01_quellen/</dt>
@@ -142,32 +142,32 @@
             <article>
               <span>01</span>
               <h3>Arbeitsraum anlegen</h3>
-              <p>Ein Vault, Kursordner oder Projektordner wird zur gemeinsamen Ablage für Quellen und Arbeitsstände.</p>
+              <p>Lege einen Ordner oder Vault an. Alles, was der Lauf lesen oder schreiben soll, liegt dort.</p>
             </article>
             <article>
               <span>02</span>
-              <h3>Quellenraum begrenzen</h3>
-              <p>Es wird notiert, welche Ordner, Datenbanken, Webseiten oder Literaturverwaltungen verwendet werden dürfen.</p>
+              <h3>Korpus eintragen</h3>
+              <p>Lege fest, welche Dateien, Links oder Datenbanken zählen. Alles andere wird als externe Ergänzung markiert.</p>
             </article>
             <article>
               <span>03</span>
-              <h3>Rechercheprofil schreiben</h3>
-              <p>Thema, Kurskontext, Zielgruppe, Suchbegriffe, Gegenpositionen und Ausschlussregeln werden als Auftrag gespeichert.</p>
+              <h3>Auftrag speichern</h3>
+              <p>Schreibe Thema, Kontext, Suchachsen, Ausschlüsse, Prüfschritte und Ausgabeformat in eine Auftragsdatei.</p>
             </article>
             <article>
               <span>04</span>
-              <h3>Ausgabeformat festlegen</h3>
-              <p>Vorab wird entschieden, ob eine Quellenkarte, Aussage-Evidenz-Matrix, Recherche-Notiz oder Liste offener Fragen entstehen soll.</p>
+              <h3>Vorlagen anlegen</h3>
+              <p>Definiere, wie eine Quellenkarte, Prüfnotiz oder Recherche-Notiz aussehen soll.</p>
             </article>
             <article>
               <span>05</span>
-              <h3>Auslöser wählen</h3>
-              <p>Der Lauf startet manuell, nach neuen Dateien im Quellenordner, wöchentlich oder vor einer Sitzung.</p>
+              <h3>Testlauf ausführen</h3>
+              <p>Starte den Lauf manuell. Prüfe, ob Quellen, Befunde und offene Fragen getrennt ausgegeben werden.</p>
             </article>
             <article>
               <span>06</span>
-              <h3>Prüfung festlegen</h3>
-              <p>Es wird bestimmt, wer prüft und welche Kriterien erfüllt sein müssen, bevor Material verwendet wird.</p>
+              <h3>Automation einschalten</h3>
+              <p>Erst nach einem brauchbaren Testlauf wird ein Auslöser gesetzt: wöchentlich, vor einer Sitzung oder nach neuen Quellen.</p>
             </article>
           </div>
         </div>
@@ -175,8 +175,8 @@
 
       <section id="arbeitsablauf" class="process-section" aria-labelledby="process-title">
         <div class="section-heading">
-          <p class="section-kicker">Arbeitsablauf</p>
-          <h2 id="process-title">Ein automatisierter Lauf arbeitet immer mit Input, Zwischenergebnis und Prüfung.</h2>
+          <p class="section-kicker">Durchlauf</p>
+          <h2 id="process-title">Was bei einem Lauf im Arbeitsraum passiert.</h2>
         </div>
         <div class="process-map" aria-label="Arbeitsablauf eines automatisierten Recherchelaufs">
           <article>
@@ -270,47 +270,60 @@
         </div>
       </section>
 
-      <section id="nutzen" class="benefits-section" aria-labelledby="benefits-title">
+      <section id="vorteile" class="benefits-section" aria-labelledby="benefits-title">
         <div class="section-heading">
-          <p class="section-kicker">Nutzen</p>
-          <h2 id="benefits-title">Der Nutzen liegt in vorbereiteter Prüfung, nicht in automatischer Freigabe.</h2>
+          <p class="section-kicker">Vorteile</p>
+          <h2 id="benefits-title">Was sich gegenüber einer normalen Chat-Recherche ändert.</h2>
         </div>
-        <div class="benefits-layout">
-          <article class="benefits-note">
-            <h3>Für Lehre und wissenschaftliche Arbeit</h3>
-            <p>
-              Agentische Recherche ersetzt keine Quellenlektüre. Sie bereitet wiederkehrende Recherchehandlungen so vor, dass Auswahl, Unsicherheit und Entscheidung sichtbar bleiben.
-            </p>
-            <p>
-              Dadurch wird aus einer einzelnen Antwort ein überprüfbarer Arbeitsstand.
-            </p>
+        <div class="benefits-table" aria-label="Vorteile eines Agentic-Research-Systems">
+          <article>
+            <h3>Ohne System</h3>
+            <p>Die Recherche endet oft als einzelner Antworttext.</p>
           </article>
-          <div class="benefits-grid" aria-label="Nutzen agentischer Recherche">
-            <article>
-              <h3>Eigener Quellenraum</h3>
-              <p>Der Lauf arbeitet mit Kursmaterial, eigenen PDFs, Notizen und Literatur statt nur mit einer allgemeinen Antwort.</p>
-            </article>
-            <article>
-              <h3>Wiederholbarkeit</h3>
-              <p>Ein Thema kann mit denselben Kriterien erneut geprüft werden: wöchentlich, vor Sitzungen oder vor Abgaben.</p>
-            </article>
-            <article>
-              <h3>Nachvollziehbarkeit</h3>
-              <p>Quellenstatus, Suchachsen, offene Fragen und Entscheidungen bleiben als Arbeitsdokumente erhalten.</p>
-            </article>
-            <article>
-              <h3>Frühere Quellenkritik</h3>
-              <p>Gegenpositionen, schwache Evidenz und fehlende Primärquellen werden vor der Synthese markiert.</p>
-            </article>
-            <article>
-              <h3>Entlastung bei Routine</h3>
-              <p>Sammeln, Vorsortieren, Extrahieren und Aktualisieren werden vorbereitet. Lesen und Bewerten bleiben fachliche Arbeit.</p>
-            </article>
-            <article>
-              <h3>Lehrbare Zwischenschritte</h3>
-              <p>Studierende können Suchplan, Quellenliste, Prüfnotiz und Aussage-Evidenz-Matrix getrennt diskutieren.</p>
-            </article>
-          </div>
+          <article>
+            <h3>Mit System</h3>
+            <p>Es entstehen Suchplan, Quellenliste, Prüfnotiz und Arbeitsstand.</p>
+          </article>
+          <article>
+            <h3>Vorteil</h3>
+            <p>Die einzelnen Arbeitsschritte können separat geprüft werden.</p>
+          </article>
+          <article>
+            <h3>Ohne System</h3>
+            <p>Der nächste Lauf nutzt andere Begriffe, andere Quellen oder andere Kriterien.</p>
+          </article>
+          <article>
+            <h3>Mit System</h3>
+            <p>Auftrag, Korpus und Prüfkriterien bleiben gespeichert.</p>
+          </article>
+          <article>
+            <h3>Vorteil</h3>
+            <p>Aktualisierungen sind vergleichbar: Was ist neu, was ist unsicherer, was bleibt gleich?</p>
+          </article>
+          <article>
+            <h3>Ohne System</h3>
+            <p>Quellenkritik wird nach dem Formulieren nachgeholt.</p>
+          </article>
+          <article>
+            <h3>Mit System</h3>
+            <p>Gegenpositionen, fehlende Primärquellen und schwache Evidenz werden als eigener Schritt gesucht.</p>
+          </article>
+          <article>
+            <h3>Vorteil</h3>
+            <p>Unsicherheit wird früh sichtbar und verschwindet nicht im fertigen Text.</p>
+          </article>
+          <article>
+            <h3>Ohne System</h3>
+            <p>Materialpflege hängt davon ab, ob jemand aktiv wieder sucht.</p>
+          </article>
+          <article>
+            <h3>Mit System</h3>
+            <p>Ein Auslöser kann den gleichen Auftrag regelmäßig starten.</p>
+          </article>
+          <article>
+            <h3>Vorteil</h3>
+            <p>Für Lehre entstehen Aktualisierungshinweise statt fertiger, ungeprüfter Aussagen.</p>
+          </article>
         </div>
       </section>
 
@@ -333,39 +346,6 @@
             <h3 id="step-title">Frage klären</h3>
             <p id="step-body">Der Auftrag legt fest, was recherchiert werden soll, welche Quellen zählen und was ausgeschlossen ist.</p>
             <p id="step-output" class="output-line">Artefakt: Rechercheauftrag</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="rollen" class="band light" aria-labelledby="roles-title">
-        <div class="section-heading">
-          <p class="section-kicker">Rollenmodell</p>
-          <h2 id="roles-title">Die Rollen beschreiben Aufgaben, keine Personen.</h2>
-        </div>
-        <div class="role-grid">
-          <article>
-            <h3>Planner</h3>
-            <p>zerlegt die Frage in Teilfragen, Suchbegriffe und Perspektiven.</p>
-          </article>
-          <article>
-            <h3>Retriever</h3>
-            <p>sucht Quellen oder lädt Material aus einem festgelegten Korpus.</p>
-          </article>
-          <article>
-            <h3>Analyst</h3>
-            <p>extrahiert Aussagen, Begriffe, Methoden, Beispiele und mögliche Aussagekandidaten.</p>
-          </article>
-          <article>
-            <h3>Critic</h3>
-            <p>prüft fehlende Quellen, Übertreibungen, Bias, Gegenpositionen und Unsicherheit.</p>
-          </article>
-          <article>
-            <h3>Synthesizer</h3>
-            <p>fasst Ergebnisse für eine Zielgruppe zusammen und markiert Grenzen.</p>
-          </article>
-          <article>
-            <h3>Fachliche Prüfung</h3>
-            <p>entscheidet, welche Aussagen verwendet werden dürfen.</p>
           </article>
         </div>
       </section>

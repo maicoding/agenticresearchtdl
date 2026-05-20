@@ -229,6 +229,7 @@ h3 {
 .automation-grid,
 .setup-steps,
 .benefits-grid,
+.benefits-table,
 .two-column {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -254,6 +255,7 @@ h3 {
 .setup-steps article,
 .benefits-note,
 .benefits-grid article,
+.benefits-table article,
 .setup-timeline article,
 .step-detail,
 .prompt-box,
@@ -273,6 +275,7 @@ h3 {
 .setup-steps article,
 .benefits-note,
 .benefits-grid article,
+.benefits-table article,
 .two-column > div {
   padding: 24px;
 }
@@ -616,6 +619,7 @@ pre {
 .role-grid p,
 .benefits-grid p,
 .benefits-note p,
+.benefits-table p,
 .quality-layout p,
 .quality-layout dd {
   color: var(--muted);
@@ -645,6 +649,18 @@ pre {
 
 .benefits-grid article {
   min-height: 210px;
+}
+
+.benefits-table {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.benefits-table article {
+  min-height: 180px;
+}
+
+.benefits-table article:nth-child(3n) {
+  background: var(--soft-teal);
 }
 
 .quality-section {
@@ -732,6 +748,7 @@ dd {
   .setup-steps,
   .benefits-layout,
   .benefits-grid,
+  .benefits-table,
   .two-column,
   .workflow-board,
   .setup-timeline,
