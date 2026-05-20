@@ -27,7 +27,7 @@
           <p class="context-line">Tag der KI-gestützten Lehre · 20. Mai 2026</p>
           <h1 id="page-title">Ein Agentic-Research-System bauen</h1>
           <p class="lead">
-            Ein solches System besteht aus einem Arbeitsraum, einem Quellenkorpus, einem gespeicherten Rechercheauftrag, festen Ausgabeformaten und einer Prüfung. Die Automation wiederholt den Ablauf und schreibt Arbeitsstände zurück. Freigegeben wird erst nach fachlicher Entscheidung.
+            Ein solches System besteht aus einem Arbeitsraum, einem Quellenkorpus, einem gespeicherten Rechercheauftrag, festen Ausgabeformaten und einer Prüfung. Die Automation wiederholt den Ablauf und schreibt Arbeitsstände zurück. Die fachliche Prüfung setzt den Verwendungsstatus.
           </p>
           <div class="action-row" aria-label="Navigation im Inhalt">
             <a class="button primary" href="#bauteile">Bauteile</a>
@@ -125,7 +125,7 @@
           <article class="setup-minimum">
             <h3>Ordnerstruktur</h3>
             <p>
-              Die Ordnernamen sind austauschbar. Wichtig ist die Trennung: Rohmaterial, Auftrag, Arbeitsstand, Prüfung.
+              Die Ordnerstruktur trennt Rohmaterial, Auftrag, Arbeitsstand und Prüfung.
             </p>
             <dl class="folder-list">
               <dt>01_quellen/</dt>
@@ -142,12 +142,12 @@
             <article>
               <span>01</span>
               <h3>Arbeitsraum anlegen</h3>
-              <p>Lege einen Ordner oder Vault an. Alles, was der Lauf lesen oder schreiben soll, liegt dort.</p>
+              <p>Lege einen Ordner oder Vault an. Quellen, Aufträge, Arbeitsstände und Prüfnotizen liegen dort.</p>
             </article>
             <article>
               <span>02</span>
               <h3>Korpus eintragen</h3>
-              <p>Lege fest, welche Dateien, Links oder Datenbanken zählen. Alles andere wird als externe Ergänzung markiert.</p>
+              <p>Lege fest, welche Dateien, Links oder Datenbanken zählen. Externe Ergänzungen erhalten eine eigene Markierung.</p>
             </article>
             <article>
               <span>03</span>
@@ -380,7 +380,7 @@
           </article>
           <article>
             <h3>Verwendungsregel</h3>
-            <p>Eine Aussage wird erst übernommen, wenn Quelle, Grenze, Gegenposition und fachliche Entscheidung dokumentiert sind.</p>
+            <p>Eine Aussage bekommt den Status verwendbar, wenn Quelle, Grenze, Gegenposition und fachliche Entscheidung dokumentiert sind.</p>
           </article>
         </div>
       </section>
@@ -427,7 +427,7 @@ Ausgabe: [Recherche-Notiz / Quellenkarte / Aussage-Evidenz-Matrix / offene Frage
 
 Aufgabe:
 1. Zerlege die Frage in Teilfragen und Suchachsen.
-2. Nutze zuerst den angegebenen Korpus; markiere externe Ergänzungen.
+2. Nutze den angegebenen Korpus; markiere externe Ergänzungen.
 3. Extrahiere Kernaussagen, Methoden, Begriffe, Beispiele und mögliche Aussagekandidaten.
 4. Trenne Signal, Interpretation und Evidenz.
 5. Suche Gegenpositionen, Lücken und methodische Unsicherheiten.
