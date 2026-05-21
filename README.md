@@ -4,4 +4,4 @@ Eine statische Seite zu Agentic Research als nachvollziehbarem Recherche- und Pr
 
 ## GitHub Pages
 
-Die Seite ist ohne Build-Step nutzbar. GitHub Pages kann direkt aus dem Repository-Root veröffentlichen.
+Die Seite besteht aus statischen Dateien. GitHub Pages kann direkt aus dem Repository-Root veröffentlichen.
