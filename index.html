@@ -15,9 +15,11 @@
         <a href="#einrichtung">Einrichtung</a>
         <a href="#bauteile">Bauteile</a>
         <a href="#tools">Tools</a>
+        <a href="#alternativen">Alternativen</a>
         <a href="#workflow">Workflow</a>
         <a href="#status">Status</a>
         <a href="#prompt-vault">Prompt-Vault</a>
+        <a href="#templates">Templates</a>
         <a href="#auftrag">Auftrag</a>
       </nav>
     </header>
@@ -74,8 +76,8 @@
         </div>
         <div class="quality-layout">
           <div>
-            <h3>1. Ordner anlegen</h3>
-            <p>Lege einen Vault oder Projektordner an. Nutze diese Struktur:</p>
+            <h3>1. Vault anlegen</h3>
+            <p>Lege in Obsidian einen neuen Vault an. Wähle einen Ordner, der gesichert wird.</p>
             <dl>
               <dt>00_Inbox</dt>
               <dd>neue Links, PDFs, Notizen, Screenshots, Gesprächsnotizen</dd>
@@ -89,23 +91,40 @@
               <dd>Gegenbelege, Evidenzgrenzen, Prüffragen</dd>
               <dt>05_Output</dt>
               <dd>Texte, Vorlagen, Berichte, Lehrmaterial</dd>
+              <dt>prompts</dt>
+              <dd>wiederverwendbare Prompts für Quellen, Claims, Review und Output</dd>
+              <dt>templates</dt>
+              <dd>Vorlagen für Notiztypen</dd>
             </dl>
           </div>
           <div>
-            <h3>2. Dateien vorbereiten</h3>
-            <p>Lege diese Startdateien an:</p>
+            <h3>2. Grunddateien anlegen</h3>
+            <p>Lege diese Dateien im Vault an:</p>
             <ul>
-              <li>README.md mit Zweck, Thema und Zuständigkeit</li>
-              <li>AGENT.md mit Rollen, Regeln und Ausgabeformaten</li>
+              <li>README.md mit Zweck, Thema, Zielgruppe und Zuständigkeit</li>
+              <li>AGENT.md mit Rollen, Regeln, Statusmodell und Ausgabeformaten</li>
+              <li>04_Review/run_log.md</li>
               <li>prompts/research_lauf.md</li>
               <li>prompts/source_card.md</li>
               <li>prompts/claim_card.md</li>
               <li>prompts/review.md</li>
+              <li>templates/source_card.md</li>
+              <li>templates/claim_card.md</li>
+              <li>templates/dossier.md</li>
             </ul>
           </div>
           <div>
-            <h3>3. Ersten Lauf starten</h3>
-            <p>Lege drei Quellen in 00_Inbox. Starte den Prompt research_lauf.md. Prüfe danach, ob Quellenkarten, Claim-Karten und Dossier-Update angelegt wurden.</p>
+            <h3>3. Obsidian einstellen</h3>
+            <p>Aktiviere in Obsidian diese Core Plugins:</p>
+            <ul>
+              <li>Backlinks</li>
+              <li>Daily Notes</li>
+              <li>Outline</li>
+              <li>Tags</li>
+              <li>Templates</li>
+              <li>Graph View</li>
+            </ul>
+            <p>Setze den Template-Ordner auf templates. Schreibe Status als Tag, etwa #inbox, #review oder #claim-ready.</p>
           </div>
         </div>
       </section>
@@ -197,6 +216,39 @@
               <h3>Run Log anlegen</h3>
               <p>Jeder Lauf bekommt Datum, Eingaben, erzeugte Dateien und offene Aufgaben.</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="alternativen" class="benefits-section" aria-labelledby="alternatives-title">
+        <div class="section-heading">
+          <p class="section-kicker">Alternativen</p>
+          <h2 id="alternatives-title">Das System kann mit verschiedenen Werkzeugen angelegt werden.</h2>
+        </div>
+        <div class="benefits-table" aria-label="Alternativen für die Einrichtung">
+          <div>
+            <h3>Vault</h3>
+            <p>Obsidian-Vault, Notion-Wiki, Markdown-Ordner, Google Drive Ordner oder GitHub Repository.</p>
+          </div>
+          <div>
+            <h3>Quellen</h3>
+            <p>Zotero, PDF-Ordner, Linkliste, Datenbankexport, Google Docs oder manuelle Quellenkarten.</p>
+          </div>
+          <div>
+            <h3>Agent</h3>
+            <p>Codex, Claude Code, Cursor, ChatGPT mit Dateizugriff oder ein lokaler Agent.</p>
+          </div>
+          <div>
+            <h3>Automatisierung</h3>
+            <p>Codex Automation, GitHub Actions, Notion Automation, Kalendertermin oder manuell gestarteter Lauf.</p>
+          </div>
+          <div>
+            <h3>Output</h3>
+            <p>Intranet-Seite, Markdown-Dossier, Google Doc, Präsentation, Lehrmaterial oder Forschungsnotiz.</p>
+          </div>
+          <div>
+            <h3>Synchronisation</h3>
+            <p>Google Drive, OneDrive, iCloud, Git, Obsidian Sync oder lokaler Ordner mit Backup.</p>
           </div>
         </div>
       </section>
@@ -347,7 +399,7 @@
         <div class="setup-layout">
           <div class="setup-minimum">
             <h3>prompts/research_lauf.md</h3>
-            <p>Nutze diesen Prompt für den ersten vollständigen Lauf:</p>
+            <p>Nutze diesen Prompt für einen Lauf durch 00_Inbox:</p>
             <dl class="folder-list">
               <dt>Aufgabe</dt>
               <dd>Lies 00_Inbox. Erstelle Source Cards, Claim Cards, Review Note und Dossier Update.</dd>
@@ -363,33 +415,66 @@
             <div>
               <span>01</span>
               <h3>source_card.md</h3>
-              <p>Erstelle eine Quellenkarte mit Titel, Autor, Datum, URL, Quellentyp, Kerninhalt und möglichen Claims.</p>
+              <p>Eingabe: PDF, Link, Textauszug oder Notiz. Ausgabe: Titel, Autor, Datum, URL, Quellentyp, Kerninhalt, mögliche Claims.</p>
             </div>
             <div>
               <span>02</span>
               <h3>claim_card.md</h3>
-              <p>Formuliere eine einzelne Aussage. Ergänze Belegstelle, Evidenztyp, Grenze, Status und verknüpfte Quelle.</p>
+              <p>Eingabe: Quellenkarte oder Fundstelle. Ausgabe: eine Aussage, Belegstelle, Evidenztyp, Grenze, Status, verknüpfte Quelle.</p>
             </div>
             <div>
               <span>03</span>
               <h3>review.md</h3>
-              <p>Prüfe Claims auf Beleg, Gegenbeleg, Evidenzgrenze, Zitationskette und offene Frage.</p>
+              <p>Eingabe: Claim Card. Ausgabe: Beleg, Gegenbeleg, Evidenzgrenze, Zitationskette, offene Frage.</p>
             </div>
             <div>
               <span>04</span>
               <h3>dossier_update.md</h3>
-              <p>Ordne geprüfte Claims in ein Dossier ein. Ergänze Begriffe, Links, offene Fragen und nächste Schritte.</p>
+              <p>Eingabe: Claim Cards und Review Notes. Ausgabe: Dossier-Abschnitt, interne Links, offene Fragen, nächste Schritte.</p>
             </div>
             <div>
               <span>05</span>
               <h3>weekly_refresh.md</h3>
-              <p>Suche neue Quellen, aktualisiere offene Fragen und schreibe ein Run Log.</p>
+              <p>Eingabe: offene Fragen und bestehende Dossiers. Ausgabe: neue Quellen, aktualisierte Fragen, Run Log.</p>
             </div>
             <div>
               <span>06</span>
               <h3>output_draft.md</h3>
-              <p>Erstelle einen Entwurf aus Claims mit Status, Dossiers und Quellenkarten.</p>
+              <p>Eingabe: Dossier und Claims mit Status. Ausgabe: Entwurf für Intranet, Bericht, Lehrmaterial oder Forschungsnotiz.</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="templates" class="band" aria-labelledby="templates-title">
+        <div class="section-heading">
+          <p class="section-kicker">Templates</p>
+          <h2 id="templates-title">Diese Vorlagen liegen im Ordner templates.</h2>
+        </div>
+        <div class="use-grid">
+          <div>
+            <h3>source_card.md</h3>
+            <p>Titel, Autor, Datum, URL, Quellentyp, Kurzinhalt, Fundstellen, mögliche Claims, Links.</p>
+          </div>
+          <div>
+            <h3>claim_card.md</h3>
+            <p>Aussage, Quelle, Belegstelle, Evidenztyp, Grenze, Status, Gegenprüfung, Links.</p>
+          </div>
+          <div>
+            <h3>dossier.md</h3>
+            <p>Thema, Leitfrage, verknüpfte Quellen, verknüpfte Claims, offene Fragen, nächste Schritte.</p>
+          </div>
+          <div>
+            <h3>daily_note.md</h3>
+            <p>Datum, heutige Arbeit, neue Quellen, offene Aufgaben, Links, Run Log.</p>
+          </div>
+          <div>
+            <h3>meeting_note.md</h3>
+            <p>Datum, Teilnehmende, Thema, Entscheidungen, Aufgaben, Links zu Projekten und Dossiers.</p>
+          </div>
+          <div>
+            <h3>output_note.md</h3>
+            <p>Zielgruppe, Format, Claims, Quellen, Dossier-Links, offene Prüfpunkte.</p>
           </div>
         </div>
       </section>
@@ -475,6 +560,7 @@ Tools:
 - Quellenverwaltung: [Zotero / PDF-Ordner / Linkliste]
 - Agent: [Codex / Claude Code / Cursor]
 - Ausgabeort: [Intranet / Bericht / Lehrmaterial / Dissertation]
+- Automatisierung: [Codex Automation / GitHub Actions / Kalendertermin / manuell]
 
 Ordner:
 1. Erstelle 00_Inbox.
@@ -494,6 +580,14 @@ Prompt-Dateien:
 6. Erstelle prompts/weekly_refresh.md.
 7. Erstelle prompts/output_draft.md.
 
+Template-Dateien:
+1. Erstelle templates/source_card.md.
+2. Erstelle templates/claim_card.md.
+3. Erstelle templates/dossier.md.
+4. Erstelle templates/daily_note.md.
+5. Erstelle templates/meeting_note.md.
+6. Erstelle templates/output_note.md.
+
 Regeln:
 - Trenne Fund, Deutung und Beleg.
 - Eine Claim Card enthält eine Aussage.
@@ -507,7 +601,15 @@ Erster Lauf:
 3. Erstelle Claim Cards in 02_Claims.
 4. Erstelle Review Notes in 04_Review.
 5. Erstelle oder aktualisiere Dossiers in 03_Dossiers.
-6. Schreibe offene Aufgaben in 04_Review/run_log.md.</code></pre>
+6. Schreibe offene Aufgaben in 04_Review/run_log.md.
+7. Verlinke neue Dateien mit [[Dateiname]].
+
+Wiederkehrender Lauf:
+1. Lies 04_Review/run_log.md.
+2. Prüfe offene Fragen.
+3. Suche neue Quellen im festgelegten Korpus.
+4. Aktualisiere Source Cards, Claim Cards und Dossiers.
+5. Schreibe Datum, Eingaben, Ausgaben und nächste Aufgaben ins Run Log.</code></pre>
           <button class="copy-button" type="button" data-copy>Auftrag kopieren</button>
         </div>
       </section>
