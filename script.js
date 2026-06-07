@@ -21,12 +21,12 @@ const stepContent = {
   },
   dossier: {
     title: "Dossier aktualisieren",
-    body: "Geprüfte Quellen, Claims, Gegenpositionen und offene Fragen werden in die langfristige Synthese eingeordnet.",
+    body: "Geprüfte Quellen, Claims, Gegenpositionen und offene Fragen werden in das Dossier eingeordnet.",
     output: "Status: pattern-ready"
   },
   output: {
     title: "Output freigeben",
-    body: "Ein Text nutzt nur geprüfte Claims oder klar markierte Hypothesen.",
+    body: "Ein Text nutzt geprüfte Claims oder markierte Hypothesen.",
     output: "Status: claim-ready"
   }
 };
