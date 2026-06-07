@@ -12,8 +12,9 @@
       <a class="brand" href="#top" aria-label="Startseite">Researchsystem</a>
       <nav class="nav" aria-label="Seitennavigation">
         <a href="#ueberblick">Überblick</a>
-        <a href="#prinzip">Prinzip</a>
+        <a href="#einrichtung">Einrichtung</a>
         <a href="#bauteile">Bauteile</a>
+        <a href="#tools">Tools</a>
         <a href="#workflow">Workflow</a>
         <a href="#status">Status</a>
         <a href="#prompt-vault">Prompt-Vault</a>
@@ -30,8 +31,8 @@
             Das System hilft beim Sammeln, Ordnen und Prüfen von Research-Material. Es legt Quellen, Aussagen, Dossiers und Aufgaben im Vault ab.
           </p>
           <div class="action-row" aria-label="Navigation im Inhalt">
-            <a class="button primary" href="#workflow">Workflow ansehen</a>
-            <a class="button secondary" href="#status">Statusmodell prüfen</a>
+            <a class="button primary" href="#einrichtung">Einrichtung</a>
+            <a class="button secondary" href="#auftrag">Prompt kopieren</a>
           </div>
         </div>
         <figure class="workflow-figure">
@@ -66,27 +67,46 @@
         </div>
       </section>
 
-      <section id="prinzip" class="quality-section" aria-labelledby="principle-title">
+      <section id="einrichtung" class="quality-section" aria-labelledby="setup-title">
         <div class="section-heading">
-          <p class="section-kicker">Prinzip</p>
-          <h2 id="principle-title">Der Vault ist der Ort für Quellen, Aussagen und Dossiers.</h2>
+          <p class="section-kicker">Einrichtung</p>
+          <h2 id="setup-title">So wird der Vault angelegt.</h2>
         </div>
         <div class="quality-layout">
-          <article>
-            <h3>Für Laien</h3>
-            <p>Das System ist ein Forschungsordner mit festen Fächern. Jede Quelle, jede Aussage und jede offene Frage bekommt einen eigenen Platz.</p>
-            <p>Der Status zeigt, ob etwas Quelle, Spur, Claim oder Dossier ist.</p>
-          </article>
-          <article>
-            <h3>Für Fortgeschrittene</h3>
-            <p>Der Vault verbindet Rohquellen, Suche, Agentenläufe und Outputs.</p>
-            <p>Die Arbeitseinheit ist das geprüfte Wissensobjekt.</p>
-          </article>
-          <article>
-            <h3>Für wissenschaftliches Arbeiten</h3>
-            <p>Jede Aussage braucht Quelle, Belegstelle, Evidenztyp, Grenze und Gegenprüfung.</p>
-            <p>Texte nutzen Claims mit Status oder markierte Hypothesen.</p>
-          </article>
+          <div>
+            <h3>1. Ordner anlegen</h3>
+            <p>Lege einen Vault oder Projektordner an. Nutze diese Struktur:</p>
+            <dl>
+              <dt>00_Inbox</dt>
+              <dd>neue Links, PDFs, Notizen, Screenshots, Gesprächsnotizen</dd>
+              <dt>01_Quellen</dt>
+              <dd>Source Cards mit Autor, Datum, URL, Fundstelle und Quellentyp</dd>
+              <dt>02_Claims</dt>
+              <dd>eine Aussage pro Datei mit Belegstelle und Status</dd>
+              <dt>03_Dossiers</dt>
+              <dd>Themen, Begriffe, offene Fragen, Synthesen</dd>
+              <dt>04_Review</dt>
+              <dd>Gegenbelege, Evidenzgrenzen, Prüffragen</dd>
+              <dt>05_Output</dt>
+              <dd>Texte, Vorlagen, Berichte, Lehrmaterial</dd>
+            </dl>
+          </div>
+          <div>
+            <h3>2. Dateien vorbereiten</h3>
+            <p>Lege diese Startdateien an:</p>
+            <ul>
+              <li>README.md mit Zweck, Thema und Zuständigkeit</li>
+              <li>AGENT.md mit Rollen, Regeln und Ausgabeformaten</li>
+              <li>prompts/research_lauf.md</li>
+              <li>prompts/source_card.md</li>
+              <li>prompts/claim_card.md</li>
+              <li>prompts/review.md</li>
+            </ul>
+          </div>
+          <div>
+            <h3>3. Ersten Lauf starten</h3>
+            <p>Lege drei Quellen in 00_Inbox. Starte den Prompt research_lauf.md. Prüfe danach, ob Quellenkarten, Claim-Karten und Dossier-Update angelegt wurden.</p>
+          </div>
         </div>
       </section>
 
@@ -110,7 +130,7 @@
             <article>
               <span>02</span>
               <h3>Source Cards</h3>
-              <p>Autor, Datum, Herkunft, Quellentyp, Interessenlage, tragbare und offene Claims.</p>
+              <p>Autor, Datum, Herkunft, Quellentyp, Interessenlage, Claims und offene Fragen.</p>
             </article>
             <article>
               <span>03</span>
@@ -132,6 +152,51 @@
               <h3>Outputs</h3>
               <p>Intranet-Texte, Lehrmaterial, Reports, Vortragsnotizen und Publikationen.</p>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="tools" class="setup-section" aria-labelledby="tools-title">
+        <div class="section-heading">
+          <p class="section-kicker">Tools</p>
+          <h2 id="tools-title">Diese Tools werden verbunden.</h2>
+        </div>
+        <div class="setup-layout">
+          <div class="setup-minimum">
+            <h3>Basis</h3>
+            <p>Ein Vault braucht Speicherort, Schreibwerkzeug, Quellenverwaltung und Agentenzugriff.</p>
+            <dl class="folder-list">
+              <dt>Speicherort</dt>
+              <dd>Google Drive, OneDrive, GitHub oder lokaler Projektordner</dd>
+              <dt>Schreibwerkzeug</dt>
+              <dd>Obsidian, Notion, Markdown-Ordner oder GitHub Pages</dd>
+              <dt>Quellenverwaltung</dt>
+              <dd>Zotero, Literaturdatenbank, PDF-Ordner oder Linkliste</dd>
+              <dt>Agentenzugriff</dt>
+              <dd>Codex, Claude Code, Cursor oder ein anderer Agent mit Dateizugriff</dd>
+            </dl>
+          </div>
+          <div class="setup-steps" aria-label="Tool-Einrichtung">
+            <div>
+              <span>01</span>
+              <h3>Vault verbinden</h3>
+              <p>Der Agent braucht Lese- und Schreibzugriff auf den Vault-Ordner.</p>
+            </div>
+            <div>
+              <span>02</span>
+              <h3>Quellenordner festlegen</h3>
+              <p>PDFs, Links und Exporte liegen in 00_Inbox oder 01_Quellen.</p>
+            </div>
+            <div>
+              <span>03</span>
+              <h3>Prompt-Ordner anlegen</h3>
+              <p>Alle wiederkehrenden Anweisungen liegen in prompts/.</p>
+            </div>
+            <div>
+              <span>04</span>
+              <h3>Run Log anlegen</h3>
+              <p>Jeder Lauf bekommt Datum, Eingaben, erzeugte Dateien und offene Aufgaben.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -277,52 +342,54 @@
       <section id="prompt-vault" class="setup-section" aria-labelledby="prompt-vault-title">
         <div class="section-heading">
           <p class="section-kicker">Agenten, Skills, Prompts</p>
-          <h2 id="prompt-vault-title">Der Prompt-Vault liefert Methoden, der Research-Vault hält Wissen.</h2>
+          <h2 id="prompt-vault-title">Diese Prompt-Dateien steuern den Lauf.</h2>
         </div>
         <div class="setup-layout">
-          <article class="setup-minimum">
-            <h3>Betriebsmodell</h3>
-            <p>Agenten übernehmen Rollen. Skills beschreiben wiederholbare Arbeitsabläufe. Prompts steuern einzelne Schritte. Run Logs dokumentieren Einsatz und Grenze.</p>
+          <div class="setup-minimum">
+            <h3>prompts/research_lauf.md</h3>
+            <p>Nutze diesen Prompt für den ersten vollständigen Lauf:</p>
             <dl class="folder-list">
-              <dt>Agent</dt>
-              <dd>Rolle mit Aufgabe, Übergabe und Prüfkriterien.</dd>
-              <dt>Skill</dt>
-              <dd>Wiederholbarer Ablauf mit Eingang und Ausgabe.</dd>
-              <dt>Prompt</dt>
-              <dd>Konkrete Anweisung für einen begrenzten Schritt.</dd>
+              <dt>Aufgabe</dt>
+              <dd>Lies 00_Inbox. Erstelle Source Cards, Claim Cards, Review Note und Dossier Update.</dd>
+              <dt>Regel</dt>
+              <dd>Trenne Fund, Deutung und Beleg. Jede Aussage bekommt Quelle und Status.</dd>
+              <dt>Ausgabe</dt>
+              <dd>Schreibe neue Dateien in 01_Quellen, 02_Claims, 03_Dossiers und 04_Review.</dd>
+              <dt>Log</dt>
+              <dd>Schreibe Datum, Eingaben, Ausgaben und offene Aufgaben in 04_Review/run_log.md.</dd>
             </dl>
-          </article>
+          </div>
           <div class="setup-steps" aria-label="Prompt-Vault-Verbindung">
-            <article>
+            <div>
               <span>01</span>
-              <h3>Research Scout</h3>
-              <p>findet Quellen, Trends und offene Fragen.</p>
-            </article>
-            <article>
+              <h3>source_card.md</h3>
+              <p>Erstelle eine Quellenkarte mit Titel, Autor, Datum, URL, Quellentyp, Kerninhalt und möglichen Claims.</p>
+            </div>
+            <div>
               <span>02</span>
-              <h3>Source Verifier</h3>
-              <p>prüft Provenienz, Datum, Autor, Quellentyp und Interessenlage.</p>
-            </article>
-            <article>
+              <h3>claim_card.md</h3>
+              <p>Formuliere eine einzelne Aussage. Ergänze Belegstelle, Evidenztyp, Grenze, Status und verknüpfte Quelle.</p>
+            </div>
+            <div>
               <span>03</span>
-              <h3>Claim Extractor</h3>
-              <p>zerlegt Quellen in einzelne prüfbare Aussagen.</p>
-            </article>
-            <article>
+              <h3>review.md</h3>
+              <p>Prüfe Claims auf Beleg, Gegenbeleg, Evidenzgrenze, Zitationskette und offene Frage.</p>
+            </div>
+            <div>
               <span>04</span>
-              <h3>Evidence Checker</h3>
-              <p>sucht Belege, Grenzen und Gegenpositionen.</p>
-            </article>
-            <article>
+              <h3>dossier_update.md</h3>
+              <p>Ordne geprüfte Claims in ein Dossier ein. Ergänze Begriffe, Links, offene Fragen und nächste Schritte.</p>
+            </div>
+            <div>
               <span>05</span>
-              <h3>Knowledge Curator</h3>
-              <p>verlinkt Konzepte, Dossiers, Quellen und offene Fragen.</p>
-            </article>
-            <article>
+              <h3>weekly_refresh.md</h3>
+              <p>Suche neue Quellen, aktualisiere offene Fragen und schreibe ein Run Log.</p>
+            </div>
+            <div>
               <span>06</span>
-              <h3>Research Writer</h3>
-              <p>schreibt aus Wissensobjekten mit Status.</p>
-            </article>
+              <h3>output_draft.md</h3>
+              <p>Erstelle einen Entwurf aus Claims mit Status, Dossiers und Quellenkarten.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -355,7 +422,7 @@
           </article>
           <article>
             <h3>Prüffrage</h3>
-            <p>Welche Aussage ist nach Gegenprüfung tragbar?</p>
+            <p>Welche Aussage hat welchen Status?</p>
           </article>
         </div>
       </section>
@@ -390,35 +457,57 @@
 
       <section id="auftrag" class="demo-section" aria-labelledby="auftrag-title">
         <div class="section-heading">
-          <p class="section-kicker">Rechercheauftrag</p>
-          <h2 id="auftrag-title">Ein Auftrag für einen Research-Lauf</h2>
+          <p class="section-kicker">Startprompt</p>
+          <h2 id="auftrag-title">Prompt zum Anlegen des Vaults</h2>
         </div>
         <div class="prompt-box">
-          <pre><code>Thema:
-[eigene Forschungsfrage]
+          <pre><code>Ziel:
+Lege ein automatisches Researchsystem als Vault an.
 
-Kontext:
-[Seminar / Dissertation / Intranet / Lehrmaterial / Projekt]
+Projekt:
+[Name des Forschungs- oder Intranet-Themas]
 
-Korpus:
-[PDFs, Quellenkarten, Notizen, Links, Datenbankexporte]
+Speicherort:
+[Google Drive / OneDrive / GitHub / lokaler Ordner]
 
-Aufgabe:
-1. Grenze Frage, Suchraum und Ausschlüsse.
-2. Lege Suchachsen und Gegenpositionen an.
-3. Erstelle Source Cards mit Autor, Datum, URL, Quellentyp und Interessenlage.
-4. Extrahiere einzelne Claims mit Belegstelle.
-5. Trenne Signal, Interpretation und Evidenz.
-6. Suche Gegenbelege, Evidenzgrenzen, Anbieterinteressen und Zitationsschleifen.
-7. Vergib Status: inbox, scoping, signal, evidence-linked, evidence-checked oder claim-ready.
-8. Aktualisiere Dossier, offene Fragen und nächste Prüfschritte.
+Tools:
+- Schreibwerkzeug: [Obsidian / Notion / Markdown-Ordner]
+- Quellenverwaltung: [Zotero / PDF-Ordner / Linkliste]
+- Agent: [Codex / Claude Code / Cursor]
+- Ausgabeort: [Intranet / Bericht / Lehrmaterial / Dissertation]
 
-Ausgabe:
-- Source Cards
-- Claim Cards
-- Review Note
-- Dossier Update
-- Entscheidungsliste</code></pre>
+Ordner:
+1. Erstelle 00_Inbox.
+2. Erstelle 01_Quellen.
+3. Erstelle 02_Claims.
+4. Erstelle 03_Dossiers.
+5. Erstelle 04_Review.
+6. Erstelle 05_Output.
+7. Erstelle prompts.
+
+Prompt-Dateien:
+1. Erstelle prompts/research_lauf.md.
+2. Erstelle prompts/source_card.md.
+3. Erstelle prompts/claim_card.md.
+4. Erstelle prompts/review.md.
+5. Erstelle prompts/dossier_update.md.
+6. Erstelle prompts/weekly_refresh.md.
+7. Erstelle prompts/output_draft.md.
+
+Regeln:
+- Trenne Fund, Deutung und Beleg.
+- Eine Claim Card enthält eine Aussage.
+- Jede Aussage enthält Quelle, Belegstelle, Evidenztyp, Grenze und Status.
+- Neue Themen starten in 00_Inbox.
+- Ein Lauf schreibt ein Run Log in 04_Review.
+
+Erster Lauf:
+1. Lies alle Dateien in 00_Inbox.
+2. Erstelle Source Cards in 01_Quellen.
+3. Erstelle Claim Cards in 02_Claims.
+4. Erstelle Review Notes in 04_Review.
+5. Erstelle oder aktualisiere Dossiers in 03_Dossiers.
+6. Schreibe offene Aufgaben in 04_Review/run_log.md.</code></pre>
           <button class="copy-button" type="button" data-copy>Auftrag kopieren</button>
         </div>
       </section>
