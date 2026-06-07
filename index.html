@@ -11,7 +11,7 @@
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Startseite">Researchsystem</a>
       <nav class="nav" aria-label="Seitennavigation">
-        <a href="#problem">Problem</a>
+        <a href="#ueberblick">Überblick</a>
         <a href="#prinzip">Prinzip</a>
         <a href="#bauteile">Bauteile</a>
         <a href="#workflow">Workflow</a>
@@ -27,7 +27,7 @@
           <p class="context-line">Research-Systeme · wissenschaftliches Arbeiten · KI</p>
           <h1 id="page-title">Automatisches Researchsystem</h1>
           <p class="lead">
-            Das System sammelt Quellen, zerlegt Aussagen, prüft Belege, hält Gegenstimmen fest und pflegt den Wissensstand im Vault.
+            Das System hilft beim Sammeln, Ordnen und Prüfen von Research-Material. Es legt Quellen, Aussagen, Dossiers und Aufgaben im Vault ab.
           </p>
           <div class="action-row" aria-label="Navigation im Inhalt">
             <a class="button primary" href="#workflow">Workflow ansehen</a>
@@ -39,28 +39,28 @@
         </figure>
       </section>
 
-      <section id="problem" class="band" aria-labelledby="problem-title">
+      <section id="ueberblick" class="band" aria-labelledby="overview-title">
         <div class="section-heading">
-          <p class="section-kicker">Ausgangspunkt</p>
-          <h2 id="problem-title">Der Ausgangspunkt ist ein geordneter Forschungsablauf.</h2>
+          <p class="section-kicker">Überblick</p>
+          <h2 id="overview-title">Das Researchsystem hat Eingaben und Ausgaben.</h2>
         </div>
         <div class="comparison-grid">
           <article>
-            <h3>Dokumentenchat</h3>
+            <h3>Eingaben</h3>
             <ul>
-              <li>holt Textstellen bei jeder Frage neu</li>
-              <li>formuliert Antworten aus aktuellem Kontext</li>
-              <li>gibt eine Antwort für den aktuellen Moment</li>
-              <li>vermischt oft Fund, Deutung und Aussage</li>
+              <li>Forschungsfrage</li>
+              <li>Korpus mit Quellen und Notizen</li>
+              <li>Suchachsen und Ausschlüsse</li>
+              <li>gewünschtes Ausgabeformat</li>
             </ul>
           </article>
           <article>
-            <h3>Automatisches Researchsystem</h3>
+            <h3>Ausgaben</h3>
             <ul>
-              <li>legt Quellenkarten und Claim-Karten an</li>
-              <li>trennt Signal, Evidenz und Interpretation</li>
-              <li>aktualisiert Dossiers und Konzepte</li>
-              <li>macht Grenzen, Gegenpositionen und offene Fragen sichtbar</li>
+              <li>Quellenkarten</li>
+              <li>Claim-Karten</li>
+              <li>Review-Notizen</li>
+              <li>Dossier-Updates</li>
             </ul>
           </article>
         </div>
@@ -75,7 +75,7 @@
           <article>
             <h3>Für Laien</h3>
             <p>Das System ist ein Forschungsordner mit festen Fächern. Jede Quelle, jede Aussage und jede offene Frage bekommt einen eigenen Platz.</p>
-            <p>So bleibt sichtbar, was belegt ist und was erst eine Spur ist.</p>
+            <p>Der Status zeigt, ob etwas Quelle, Spur, Claim oder Dossier ist.</p>
           </article>
           <article>
             <h3>Für Fortgeschrittene</h3>
@@ -85,7 +85,7 @@
           <article>
             <h3>Für wissenschaftliches Arbeiten</h3>
             <p>Jede Aussage braucht Quelle, Belegstelle, Evidenztyp, Grenze und Gegenprüfung.</p>
-            <p>Freigegebene Texte nutzen freigegebene Claims oder markierte Hypothesen.</p>
+            <p>Texte nutzen Claims mit Status oder markierte Hypothesen.</p>
           </article>
         </div>
       </section>
@@ -99,7 +99,7 @@
           <article class="automation-note">
             <h3>Minimaler Aufbau</h3>
             <p>Rohmaterial, Quellen, Claims, Reviews, Dossiers und Outputs liegen getrennt.</p>
-            <p>Agenten, Skills und Prompts steuern Arbeitsschritte. Evidenz bleibt an Quellen gebunden.</p>
+            <p>Agenten, Skills und Prompts steuern Arbeitsschritte. Evidenz wird mit Quellen verbunden.</p>
           </article>
           <div class="automation-grid" aria-label="Bauteile eines Research-Systems">
             <article>
@@ -120,7 +120,7 @@
             <article>
               <span>04</span>
               <h3>Review</h3>
-              <p>Gegenbelege, schwache Evidenz, Zitationsketten, Unsicherheit und fachliche Prüfung.</p>
+            <p>Gegenbelege, Evidenzgrenzen, Zitationsketten, Unsicherheit und fachliche Prüfung.</p>
             </article>
             <article>
               <span>05</span>
@@ -181,7 +181,7 @@
           <article>
             <span>05</span>
             <h3>Gegenprüfung</h3>
-            <p>Das System sucht Gegenbelege, methodische Grenzen, Vendor Claims und AI Slop.</p>
+            <p>Das System sucht Gegenbelege, methodische Grenzen, Anbieterinteressen und Zitationsketten.</p>
             <dl class="artifact-pair">
               <dt>Artefakt</dt>
               <dd>Review Note</dd>
@@ -199,7 +199,7 @@
           <article>
             <span>07</span>
             <h3>Output entwerfen</h3>
-            <p>Ein Text entsteht aus geprüften Research Notes, Claims und Dossiers.</p>
+            <p>Ein Text nutzt Research Notes, Claims und Dossiers.</p>
             <dl class="artifact-pair">
               <dt>Artefakt</dt>
               <dd>Draft</dd>
@@ -241,8 +241,8 @@
 
       <section id="status" class="quality-section" aria-labelledby="status-title">
         <div class="section-heading">
-          <p class="section-kicker">Qualität</p>
-          <h2 id="status-title">Status trennt Formulierung, Beleg und Freigabe.</h2>
+          <p class="section-kicker">Status</p>
+          <h2 id="status-title">Jede Karte bekommt einen Arbeitsstatus.</h2>
         </div>
         <div class="quality-layout">
           <article>
@@ -269,7 +269,7 @@
           </article>
           <article>
             <h3>Freigabe</h3>
-            <p>Ein Claim wird freigegeben, wenn Quelle, Belegstelle, Grenze, Gegenprüfung und Review-Entscheidung dokumentiert sind.</p>
+            <p>Ein Claim erhält den Status claim-ready, wenn Quelle, Belegstelle, Grenze, Gegenprüfung und Review-Entscheidung dokumentiert sind.</p>
           </article>
         </div>
       </section>
@@ -321,7 +321,7 @@
             <article>
               <span>06</span>
               <h3>Research Writer</h3>
-            <p>schreibt aus geprüften Wissensobjekten.</p>
+              <p>schreibt aus Wissensobjekten mit Status.</p>
             </article>
           </div>
         </div>
@@ -381,10 +381,10 @@
         </div>
       </section>
 
-      <section class="review-strip" aria-label="Leitsatz zur fachlichen Prüfung">
+      <section class="review-strip" aria-label="Hinweis zur Nutzung">
         <blockquote>
-          <span>Das System darf vorbereiten.</span>
-          <strong>Die Freigabe bleibt fachliche Verantwortung.</strong>
+          <span>Das System bereitet Material vor.</span>
+          <strong>Die fachliche Prüfung setzt den Status.</strong>
         </blockquote>
       </section>
 
@@ -409,7 +409,7 @@ Aufgabe:
 3. Erstelle Source Cards mit Autor, Datum, URL, Quellentyp und Interessenlage.
 4. Extrahiere einzelne Claims mit Belegstelle.
 5. Trenne Signal, Interpretation und Evidenz.
-6. Suche Gegenbelege, schwache Evidenz, Vendor Claims und Zitationsschleifen.
+6. Suche Gegenbelege, Evidenzgrenzen, Anbieterinteressen und Zitationsschleifen.
 7. Vergib Status: inbox, scoping, signal, evidence-linked, evidence-checked oder claim-ready.
 8. Aktualisiere Dossier, offene Fragen und nächste Prüfschritte.
 

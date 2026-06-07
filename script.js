@@ -16,7 +16,7 @@ const stepContent = {
   },
   review: {
     title: "Gegenprüfung",
-    body: "Gegenbelege, schwache Evidenz, Zitationsschleifen, Vendor Claims und AI Slop werden gesucht.",
+    body: "Gegenbelege, Evidenzgrenzen, Anbieterinteressen und Zitationsketten werden gesucht.",
     output: "Status: evidence-checked"
   },
   dossier: {
