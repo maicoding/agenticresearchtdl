@@ -1,38 +1,33 @@
 const stepContent = {
   frage: {
     title: "Frage klären",
-    body: "Der Auftrag legt fest, was recherchiert werden soll, welche Quellen zählen und was ausgeschlossen ist.",
-    output: "Artefakt: Rechercheauftrag"
+    body: "Der Auftrag begrenzt Thema, Korpus, Zielgruppe und Ausschlüsse.",
+    output: "Status: scoping"
   },
-  plan: {
-    title: "Suchplan bauen",
-    body: "Die Frage wird in Teilfragen, Begriffe, Perspektiven und mögliche Gegenpositionen zerlegt.",
-    output: "Artefakt: Suchplan"
+  quelle: {
+    title: "Quelle prüfen",
+    body: "Herkunft, Datum, Quellentyp, Primärnähe und Interessenlage werden sichtbar.",
+    output: "Status: evidence-linked"
   },
-  quellen: {
-    title: "Quellenraum begrenzen",
-    body: "Das System arbeitet mit einem festgelegten Korpus. Herkunft, Datum, Quellenart und Nutzungsgrenze werden notiert.",
-    output: "Artefakt: Quellenliste mit Status"
-  },
-  analyse: {
-    title: "Befunde extrahieren",
-    body: "Kernaussage, Kontext, Methode, Beispiel und möglicher Aussagekandidat werden getrennt erfasst.",
-    output: "Artefakt: Fundstellenliste"
-  },
-  kritik: {
-    title: "Kritik prüfen",
-    body: "Lücken, schwache Evidenz, Anbieteraussagen, Zitationsschleifen und Gegenpositionen werden gesucht.",
-    output: "Artefakt: Prüfnotiz"
-  },
-  synthese: {
-    title: "Arbeitsstand schreiben",
-    body: "Die Ergebnisse werden zusammengefasst. Quellenbezug, Unsicherheit und offene Prüfschritte bleiben erhalten.",
-    output: "Artefakt: Recherche-Notiz"
+  claim: {
+    title: "Claim extrahieren",
+    body: "Eine Aussage wird einzeln formuliert und mit Belegstelle, Grenze und Status verbunden.",
+    output: "Status: evidence-linked"
   },
   review: {
-    title: "Verwendung entscheiden",
-    body: "Eine Person prüft, was übernommen, zurückgestellt, genauer gelesen oder verworfen wird.",
-    output: "Artefakt: Entscheidungsliste"
+    title: "Gegenprüfung",
+    body: "Gegenbelege, schwache Evidenz, Zitationsschleifen, Vendor Claims und AI Slop werden gesucht.",
+    output: "Status: evidence-checked"
+  },
+  dossier: {
+    title: "Dossier aktualisieren",
+    body: "Geprüfte Quellen, Claims, Gegenpositionen und offene Fragen werden in die langfristige Synthese eingeordnet.",
+    output: "Status: pattern-ready"
+  },
+  output: {
+    title: "Output freigeben",
+    body: "Ein Text nutzt nur geprüfte Claims oder klar markierte Hypothesen.",
+    output: "Status: claim-ready"
   }
 };
 
@@ -68,7 +63,7 @@ if (copyButton) {
       await navigator.clipboard.writeText(text);
       copyButton.textContent = "Kopiert";
       window.setTimeout(() => {
-        copyButton.textContent = "Prompt kopieren";
+        copyButton.textContent = "Auftrag kopieren";
       }, 1600);
     } catch {
       copyButton.textContent = "Manuell markieren";

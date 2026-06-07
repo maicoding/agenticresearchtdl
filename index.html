@@ -3,451 +3,436 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ein Agentic-Research-System bauen</title>
-    <meta name="description" content="Bauteile, Einrichtung, Durchlauf und Vorteile eines Agentic-Research-Systems für Lehre und wissenschaftliches Arbeiten.">
+    <title>Agentic Research System</title>
+    <meta name="description" content="Selbsterklärende HTML-Präsentation zu agentischen Research-Systemen, wissenschaftlichem Arbeiten, Evidenzprüfung, Skills und Prompt-Vault.">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Startseite">Agentic Research</a>
       <nav class="nav" aria-label="Seitennavigation">
+        <a href="#problem">Problem</a>
         <a href="#prinzip">Prinzip</a>
         <a href="#bauteile">Bauteile</a>
-        <a href="#einrichtung">Einrichtung</a>
-        <a href="#arbeitsablauf">Durchlauf</a>
-        <a href="#vorteile">Vorteile</a>
-        <a href="#qualitaet">Qualität</a>
-        <a href="#demo">Auftrag</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#status">Status</a>
+        <a href="#prompt-vault">Prompt-Vault</a>
+        <a href="#auftrag">Auftrag</a>
       </nav>
     </header>
 
     <main id="top">
       <section class="intro-section" aria-labelledby="page-title">
         <div class="intro-copy">
-          <p class="context-line">Tag der KI-gestützten Lehre · 20. Mai 2026</p>
-          <h1 id="page-title">Ein Agentic-Research-System bauen</h1>
+          <p class="context-line">Research-Systeme · wissenschaftliches Arbeiten · KI</p>
+          <h1 id="page-title">Ein Research-System, das Wissen aufbaut</h1>
           <p class="lead">
-            Ein solches System besteht aus einem Arbeitsraum, einem Quellenkorpus, einem gespeicherten Rechercheauftrag, festen Ausgabeformaten und einer Prüfung. Die Automation wiederholt den Ablauf und schreibt Arbeitsstände zurück. Die fachliche Prüfung setzt den Verwendungsstatus.
+            Ein agentisches Research-System sammelt Quellen, zerlegt Aussagen, prüft Evidenz, hält Gegenpositionen fest und schreibt geprüfte Erkenntnisse in einen dauerhaften Wissensraum zurück.
           </p>
           <div class="action-row" aria-label="Navigation im Inhalt">
-            <a class="button primary" href="#bauteile">Bauteile</a>
-            <a class="button secondary" href="#arbeitsablauf">Durchlauf</a>
+            <a class="button primary" href="#workflow">Workflow ansehen</a>
+            <a class="button secondary" href="#status">Statusmodell prüfen</a>
           </div>
         </div>
         <figure class="workflow-figure">
-          <img src="assets/agentic-research-loop.svg" alt="Arbeitsablauf mit Frage, Plan, Quellen, Analyse, Kritik, Synthese, fachlicher Prüfung und Nutzung">
+          <img src="assets/agentic-research-loop.svg" alt="Kreislauf aus Frage, Plan, Quellen, Analyse, Kritik, Synthese, Prüfung und Wissensspeicher">
         </figure>
       </section>
 
-      <section id="prinzip" class="band" aria-labelledby="principle-title">
+      <section id="problem" class="band" aria-labelledby="problem-title">
         <div class="section-heading">
-          <p class="section-kicker">Prinzip</p>
-          <h2 id="principle-title">Ein Research-System legt den Arbeitskontext vor dem Lauf fest.</h2>
+          <p class="section-kicker">Ausgangspunkt</p>
+          <h2 id="problem-title">Chat mit Dokumenten reicht für wissenschaftliches Arbeiten selten aus.</h2>
         </div>
         <div class="comparison-grid">
           <article>
-            <h3>Vor dem Lauf</h3>
+            <h3>Typisches Dokumenten-Chat-System</h3>
             <ul>
-              <li>Fragestellung, Kurskontext und Zielgruppe festlegen.</li>
-              <li>Quellenkorpus, Suchachsen und Ausschlüsse eintragen.</li>
-              <li>Ausgabeformate und Prüfkriterien auswählen.</li>
-              <li>Startpunkt festlegen: manuell, vor Sitzung oder wiederkehrend.</li>
+              <li>holt Textstellen bei jeder Frage neu</li>
+              <li>formuliert Antworten aus aktuellem Kontext</li>
+              <li>speichert Synthesen meist nicht als Wissensobjekte</li>
+              <li>vermischt oft Fund, Deutung und Aussage</li>
             </ul>
           </article>
           <article>
-            <h3>Nach dem Lauf</h3>
+            <h3>Agentic Research System</h3>
             <ul>
-              <li>Suchplan, Quellenliste und Fundstellenliste liegen als Dateien vor.</li>
-              <li>Prüfnotiz und offene Fragen bleiben vom Arbeitsstand getrennt.</li>
-              <li>Entscheidungen werden in einer Liste gespeichert.</li>
-              <li>Der gespeicherte Auftrag kann erneut ausgeführt werden.</li>
+              <li>legt Quellenkarten und Claim-Karten an</li>
+              <li>trennt Signal, Evidenz und Interpretation</li>
+              <li>aktualisiert Dossiers und Konzepte dauerhaft</li>
+              <li>macht Grenzen, Gegenpositionen und offene Fragen sichtbar</li>
             </ul>
           </article>
         </div>
       </section>
 
-      <section id="bauteile" class="automation-section" aria-labelledby="automation-title">
+      <section id="prinzip" class="quality-section" aria-labelledby="principle-title">
+        <div class="section-heading">
+          <p class="section-kicker">Prinzip</p>
+          <h2 id="principle-title">Wissen entsteht im Vault, nicht im einzelnen Chatlauf.</h2>
+        </div>
+        <div class="quality-layout">
+          <article>
+            <h3>Für Laien</h3>
+            <p>Das System ist ein Forschungsordner mit festen Fächern. Jede Quelle, jede Aussage und jede offene Frage bekommt einen eigenen Platz.</p>
+            <p>So bleibt sichtbar, was belegt ist und was erst eine Spur ist.</p>
+          </article>
+          <article>
+            <h3>Für Fortgeschrittene</h3>
+            <p>Der Vault bildet eine persistente Wiki-Schicht zwischen Rohquellen, Retrieval, Agentenläufen und öffentlichen Outputs.</p>
+            <p>Die entscheidende Einheit ist das geprüfte Wissensobjekt.</p>
+          </article>
+          <article>
+            <h3>Für wissenschaftliches Arbeiten</h3>
+            <p>Jede tragende Aussage braucht Quelle, Belegstelle, Evidenztyp, Grenze und Gegenprüfung.</p>
+            <p>Öffentliche Synthesen nutzen nur freigegebene Claims oder markierte Hypothesen.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="bauteile" class="automation-section" aria-labelledby="parts-title">
         <div class="section-heading">
           <p class="section-kicker">Bauteile</p>
-          <h2 id="automation-title">Das System besteht aus Ordnern, Vorlagen, einem Lauf und einer Prüfstelle.</h2>
+          <h2 id="parts-title">Das System hat sechs feste Ebenen.</h2>
         </div>
         <div class="automation-layout">
           <article class="automation-note">
             <h3>Minimaler Aufbau</h3>
-            <p>
-              Mindestbestandteile: Arbeitsraum, Quellenkorpus, Rechercheauftrag, Ausgabevorlagen, Laufprotokoll und Prüfliste.
-            </p>
-            <p>
-              Eingaben, Zwischenergebnisse und Entscheidungen liegen in getrennten Dateien.
-            </p>
+            <p>Rohmaterial, Quellen, Claims, Reviews, Dossiers und Outputs liegen getrennt.</p>
+            <p>Agenten, Skills und Prompts steuern Arbeitsschritte. Sie ersetzen keine Evidenz.</p>
           </article>
-          <div class="automation-grid" aria-label="Bauteile eines Agentic-Research-Systems">
+          <div class="automation-grid" aria-label="Bauteile eines Research-Systems">
             <article>
               <span>01</span>
-              <h3>Arbeitsraum</h3>
-              <p>Ein Vault, Kursordner oder Repository mit Quellen, Aufträgen, Arbeitsständen und Prüfung.</p>
+              <h3>Inbox und Rohmaterial</h3>
+              <p>PDFs, Links, Exporte, Notizen, Gespräche, Screenshots und erste Fragen.</p>
             </article>
             <article>
               <span>02</span>
-              <h3>Quellenkorpus</h3>
-              <p>PDFs, Links, Datenbankexporte, Notizen, Transkripte oder Kursmaterialien mit klarer Grenze.</p>
+              <h3>Source Cards</h3>
+              <p>Autor, Datum, Herkunft, Quellentyp, Interessenlage, tragbare und offene Claims.</p>
             </article>
             <article>
               <span>03</span>
-              <h3>Rechercheauftrag</h3>
-              <p>Thema, Kontext, Ausschlüsse, Suchachsen, gewünschte Tiefe und Stoppregeln.</p>
+              <h3>Claim Cards</h3>
+              <p>Eine prüfbare Aussage pro Karte, mit Quelle, Belegstelle, Grenze und Status.</p>
             </article>
             <article>
               <span>04</span>
-              <h3>Ausgabevorlagen</h3>
-              <p>Quellenkarte, Aussage-Evidenz-Matrix, Prüfnotiz, Recherche-Notiz oder offene Fragen.</p>
+              <h3>Review</h3>
+              <p>Gegenbelege, schwache Evidenz, Zitationsketten, Unsicherheit und fachliche Prüfung.</p>
             </article>
             <article>
               <span>05</span>
-              <h3>Agentenlauf</h3>
-              <p>Der Lauf liest Auftrag und Korpus, extrahiert Befunde und schreibt strukturierte Dateien.</p>
+              <h3>Dossiers</h3>
+              <p>Lebende Synthesen zu Themen, Begriffen, Mustern, offenen Fragen und Gegenpositionen.</p>
             </article>
             <article>
               <span>06</span>
-              <h3>Prüfstelle</h3>
-              <p>Eine Person entscheidet: übernehmen, genauer lesen, beobachten, verwerfen oder neu beauftragen.</p>
+              <h3>Outputs</h3>
+              <p>Intranet-Texte, Lehrmaterial, Reports, Vortragsnotizen und Veröffentlichungen.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section id="einrichtung" class="setup-section" aria-labelledby="setup-title">
+      <section id="workflow" class="process-section" aria-labelledby="workflow-title">
         <div class="section-heading">
-          <p class="section-kicker">Einrichtung</p>
-          <h2 id="setup-title">So wird das System aufgebaut.</h2>
+          <p class="section-kicker">Workflow</p>
+          <h2 id="workflow-title">Ein Lauf erzeugt prüfbare Zwischenstände.</h2>
         </div>
-        <div class="setup-layout">
-          <article class="setup-minimum">
-            <h3>Ordnerstruktur</h3>
-            <p>
-              Die Ordnerstruktur trennt Rohmaterial, Auftrag, Arbeitsstand und Prüfung.
-            </p>
-            <dl class="folder-list">
-              <dt>01_quellen/</dt>
-              <dd>PDFs, Links, Exporte, eigene Notizen.</dd>
-              <dt>02_auftraege/</dt>
-              <dd>Fragestellung, Rahmen, Ausschlüsse, gewünschte Tiefe.</dd>
-              <dt>03_arbeitsstaende/</dt>
-              <dd>vom System erzeugte Notizen, Quellenlisten, Matrizen.</dd>
-              <dt>04_pruefung/</dt>
-              <dd>fachliche Prüfung, Entscheidungen, offene Punkte.</dd>
-            </dl>
-          </article>
-          <div class="setup-steps" aria-label="Schritte zur Einrichtung">
-            <article>
-              <span>01</span>
-              <h3>Arbeitsraum anlegen</h3>
-              <p>Lege einen Ordner oder Vault an. Quellen, Aufträge, Arbeitsstände und Prüfnotizen liegen dort.</p>
-            </article>
-            <article>
-              <span>02</span>
-              <h3>Korpus eintragen</h3>
-              <p>Lege fest, welche Dateien, Links oder Datenbanken zählen. Externe Ergänzungen erhalten eine eigene Markierung.</p>
-            </article>
-            <article>
-              <span>03</span>
-              <h3>Auftrag speichern</h3>
-              <p>Schreibe Thema, Kontext, Suchachsen, Ausschlüsse, Prüfschritte und Ausgabeformat in eine Auftragsdatei.</p>
-            </article>
-            <article>
-              <span>04</span>
-              <h3>Vorlagen anlegen</h3>
-              <p>Definiere, wie eine Quellenkarte, Prüfnotiz oder Recherche-Notiz aussehen soll.</p>
-            </article>
-            <article>
-              <span>05</span>
-              <h3>Testlauf ausführen</h3>
-              <p>Starte den Lauf manuell. Prüfe, ob Quellen, Befunde und offene Fragen getrennt ausgegeben werden.</p>
-            </article>
-            <article>
-              <span>06</span>
-              <h3>Automation einschalten</h3>
-              <p>Nach einem brauchbaren Testlauf wird ein Auslöser gesetzt: wöchentlich, vor einer Sitzung oder nach neuen Quellen.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="arbeitsablauf" class="process-section" aria-labelledby="process-title">
-        <div class="section-heading">
-          <p class="section-kicker">Durchlauf</p>
-          <h2 id="process-title">Was bei einem Lauf im Arbeitsraum passiert.</h2>
-        </div>
-        <div class="process-map" aria-label="Arbeitsablauf eines automatisierten Recherchelaufs">
+        <div class="process-map" aria-label="Workflow eines agentischen Research-Systems">
           <article>
             <span>01</span>
-            <h3>Auftrag lesen</h3>
-            <p>Das System liest Rechercheprofil, Quellenraum, Ausgabeformat und Prüfkriterien.</p>
+            <h3>Frage klären</h3>
+            <p>Fragestellung, Zielgruppe, Korpus, Ausschlüsse und gewünschte Tiefe werden festgelegt.</p>
             <dl class="artifact-pair">
-              <dt>Input</dt>
+              <dt>Artefakt</dt>
               <dd>Rechercheauftrag</dd>
-              <dt>Ergebnis</dt>
-              <dd>Suchplan</dd>
             </dl>
           </article>
           <article>
             <span>02</span>
             <h3>Suchachsen bilden</h3>
-            <p>Die Fragestellung wird in Teilfragen, Begriffe, Perspektiven und Gegenpositionen zerlegt.</p>
+            <p>Begriffe, Teilfragen, Perspektiven und mögliche Gegenpositionen werden getrennt.</p>
             <dl class="artifact-pair">
-              <dt>Input</dt>
-              <dd>Thema und Rahmen</dd>
-              <dt>Ergebnis</dt>
-              <dd>Suchachsen</dd>
+              <dt>Artefakt</dt>
+              <dd>Suchplan</dd>
             </dl>
           </article>
           <article>
             <span>03</span>
-            <h3>Quellen abrufen</h3>
-            <p>Der festgelegte Korpus wird durchsucht. Externe Ergänzungen werden als solche markiert.</p>
+            <h3>Quellen prüfen</h3>
+            <p>Herkunft, Datum, Quellentyp, Primärnähe und Interessenlage werden notiert.</p>
             <dl class="artifact-pair">
-              <dt>Input</dt>
-              <dd>PDFs, Links, Datenbanken</dd>
-              <dt>Ergebnis</dt>
-              <dd>Quellenliste mit Status</dd>
+              <dt>Artefakt</dt>
+              <dd>Source Card</dd>
             </dl>
           </article>
           <article>
             <span>04</span>
-            <h3>Befunde extrahieren</h3>
-            <p>Kernaussagen, Methoden, Begriffe, Beispiele und Aussagekandidaten werden getrennt erfasst.</p>
+            <h3>Claims extrahieren</h3>
+            <p>Jede belastbare Aussage wird einzeln formuliert und mit Belegstelle verbunden.</p>
             <dl class="artifact-pair">
-              <dt>Input</dt>
-              <dd>markierte Quellen</dd>
-              <dt>Ergebnis</dt>
-              <dd>Fundstellenliste</dd>
+              <dt>Artefakt</dt>
+              <dd>Claim Card</dd>
             </dl>
           </article>
           <article>
             <span>05</span>
-            <h3>Kritiklauf ausführen</h3>
-            <p>Das System sucht Lücken, schwache Evidenz, Anbieterinteressen, Zitationsschleifen und Gegenargumente.</p>
+            <h3>Gegenprüfung</h3>
+            <p>Das System sucht Gegenbelege, methodische Grenzen, Vendor Claims und AI Slop.</p>
             <dl class="artifact-pair">
-              <dt>Input</dt>
-              <dd>Fundstellenliste</dd>
-              <dt>Ergebnis</dt>
-              <dd>Prüfnotiz</dd>
+              <dt>Artefakt</dt>
+              <dd>Review Note</dd>
             </dl>
           </article>
           <article>
             <span>06</span>
-            <h3>Arbeitsstand schreiben</h3>
-            <p>Die Ergebnisse werden zusammengeführt. Unsicherheiten, Quellenbezug und offene Punkte werden festgehalten.</p>
+            <h3>Dossier aktualisieren</h3>
+            <p>Geprüfte Quellen, Claims und offene Fragen werden in die langfristige Synthese eingeordnet.</p>
             <dl class="artifact-pair">
-              <dt>Input</dt>
-              <dd>Quellenliste und Prüfnotiz</dd>
-              <dt>Ergebnis</dt>
-              <dd>Recherche-Notiz</dd>
+              <dt>Artefakt</dt>
+              <dd>Dossier Update</dd>
             </dl>
           </article>
           <article>
             <span>07</span>
-            <h3>Fachlich prüfen</h3>
-            <p>Eine Person entscheidet, was übernommen, genauer gelesen, beobachtet, verworfen oder neu beauftragt wird.</p>
+            <h3>Output entwerfen</h3>
+            <p>Ein Text entsteht aus geprüften Research Notes, Claims und Dossiers.</p>
             <dl class="artifact-pair">
-              <dt>Input</dt>
-              <dd>Recherche-Notiz</dd>
-              <dt>Ergebnis</dt>
-              <dd>Entscheidungsliste</dd>
+              <dt>Artefakt</dt>
+              <dd>Draft</dd>
             </dl>
           </article>
           <article>
             <span>08</span>
-            <h3>Zurückschreiben</h3>
-            <p>Geprüfte Ergebnisse werden in Vault, Seminarplan, Materialsammlung oder Manuskript übernommen.</p>
+            <h3>Freigabe prüfen</h3>
+            <p>Fachliche Prüfung entscheidet über Nutzung, Nacharbeit, Beobachtung oder Verwerfen.</p>
             <dl class="artifact-pair">
-              <dt>Input</dt>
+              <dt>Artefakt</dt>
               <dd>Entscheidungsliste</dd>
-              <dt>Ergebnis</dt>
-              <dd>aktualisierter Arbeitsraum</dd>
             </dl>
           </article>
         </div>
       </section>
 
-      <section id="vorteile" class="benefits-section" aria-labelledby="benefits-title">
+      <section class="workflow-section" aria-labelledby="interactive-title">
         <div class="section-heading">
-          <p class="section-kicker">Vorteile</p>
-          <h2 id="benefits-title">Vorteile im Betrieb des Systems.</h2>
-        </div>
-        <div class="benefits-table" aria-label="Vorteile eines Agentic-Research-Systems">
-          <article>
-            <h3>Vorteil</h3>
-            <p>Nachvollziehbarer Rechercheweg.</p>
-          </article>
-          <article>
-            <h3>Systembestandteil</h3>
-            <p>Suchplan, Quellenliste, Fundstellenliste und Prüfnotiz.</p>
-          </article>
-          <article>
-            <h3>Prüffrage</h3>
-            <p>Welche Quelle trägt welche Aussage?</p>
-          </article>
-          <article>
-            <h3>Vorteil</h3>
-            <p>Wiederholbare Aktualisierung.</p>
-          </article>
-          <article>
-            <h3>Systembestandteil</h3>
-            <p>Gespeicherter Auftrag, fester Korpus, gleiche Prüfkriterien.</p>
-          </article>
-          <article>
-            <h3>Prüffrage</h3>
-            <p>Was ist neu, was wurde präzisiert, was bleibt offen?</p>
-          </article>
-          <article>
-            <h3>Vorteil</h3>
-            <p>Frühere Quellenkritik.</p>
-          </article>
-          <article>
-            <h3>Systembestandteil</h3>
-            <p>Eigener Kritiklauf mit Gegenpositionen, Primärquellencheck und Evidenzstatus.</p>
-          </article>
-          <article>
-            <h3>Prüffrage</h3>
-            <p>Welche Aussage braucht weitere Lektüre?</p>
-          </article>
-          <article>
-            <h3>Vorteil</h3>
-            <p>Materialpflege mit Auslöser.</p>
-          </article>
-          <article>
-            <h3>Systembestandteil</h3>
-            <p>Wöchentlicher Lauf, Sitzungsvorbereitung oder Lauf nach neuen Quellen.</p>
-          </article>
-          <article>
-            <h3>Prüffrage</h3>
-            <p>Welche Lehrnotiz oder Materialsammlung braucht ein Update?</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="workflow-section" aria-labelledby="workflow-title">
-        <div class="section-heading">
-          <p class="section-kicker">Zwischenergebnisse</p>
-          <h2 id="workflow-title">Jeder Schritt erzeugt ein prüfbares Arbeitsdokument.</h2>
+          <p class="section-kicker">Zwischenstände</p>
+          <h2 id="interactive-title">Jeder Schritt hat ein anderes Qualitätsziel.</h2>
         </div>
         <div class="workflow-board">
           <div class="step-list" role="tablist" aria-label="Arbeitsschritte">
             <button class="step active" type="button" role="tab" aria-selected="true" data-step="frage">Frage</button>
-            <button class="step" type="button" role="tab" aria-selected="false" data-step="plan">Plan</button>
-            <button class="step" type="button" role="tab" aria-selected="false" data-step="quellen">Quellen</button>
-            <button class="step" type="button" role="tab" aria-selected="false" data-step="analyse">Analyse</button>
-            <button class="step" type="button" role="tab" aria-selected="false" data-step="kritik">Kritik</button>
-            <button class="step" type="button" role="tab" aria-selected="false" data-step="synthese">Synthese</button>
-            <button class="step" type="button" role="tab" aria-selected="false" data-step="review">Prüfung</button>
+            <button class="step" type="button" role="tab" aria-selected="false" data-step="quelle">Quelle</button>
+            <button class="step" type="button" role="tab" aria-selected="false" data-step="claim">Claim</button>
+            <button class="step" type="button" role="tab" aria-selected="false" data-step="review">Review</button>
+            <button class="step" type="button" role="tab" aria-selected="false" data-step="dossier">Dossier</button>
+            <button class="step" type="button" role="tab" aria-selected="false" data-step="output">Output</button>
           </div>
           <article class="step-detail" aria-live="polite">
             <h3 id="step-title">Frage klären</h3>
-            <p id="step-body">Der Auftrag legt fest, was recherchiert werden soll, welche Quellen zählen und was ausgeschlossen ist.</p>
-            <p id="step-output" class="output-line">Artefakt: Rechercheauftrag</p>
+            <p id="step-body">Der Auftrag begrenzt Thema, Korpus, Zielgruppe und Ausschlüsse.</p>
+            <p id="step-output" class="output-line">Status: scoping</p>
           </article>
         </div>
       </section>
 
-      <section id="qualitaet" class="quality-section" aria-labelledby="quality-title">
+      <section id="status" class="quality-section" aria-labelledby="status-title">
         <div class="section-heading">
-          <p class="section-kicker">Prüfung</p>
-          <h2 id="quality-title">Jede Aussage bekommt Quellenstatus und Grenze.</h2>
+          <p class="section-kicker">Qualität</p>
+          <h2 id="status-title">Status verhindert, dass gute Formulierung mit Wahrheit verwechselt wird.</h2>
         </div>
         <div class="quality-layout">
           <article>
-            <h3>Drei Ebenen trennen</h3>
+            <h3>Drei Ebenen</h3>
             <dl>
               <dt>Signal</dt>
-              <dd>Was wurde gefunden oder beobachtet?</dd>
+              <dd>Was wurde gefunden oder wiederholt beobachtet?</dd>
               <dt>Interpretation</dt>
-              <dd>Was könnte das bedeuten?</dd>
+              <dd>Welche Deutung wird daraus abgeleitet?</dd>
               <dt>Evidenz</dt>
               <dd>Was trägt die Quelle tatsächlich?</dd>
             </dl>
           </article>
           <article>
-            <h3>Statusmodell</h3>
+            <h3>Statusleiter</h3>
             <ol class="status-list">
               <li>inbox</li>
               <li>scoping</li>
               <li>signal</li>
-              <li>candidate-source</li>
               <li>evidence-linked</li>
+              <li>evidence-checked</li>
               <li>claim-ready</li>
             </ol>
           </article>
           <article>
-            <h3>Verwendungsregel</h3>
-            <p>Eine Aussage bekommt den Status verwendbar, wenn Quelle, Grenze, Gegenposition und fachliche Entscheidung dokumentiert sind.</p>
+            <h3>Freigaberegel</h3>
+            <p>Ein Claim wird erst öffentlich nutzbar, wenn Quelle, Belegstelle, Grenze, Gegenprüfung und menschliche Review-Entscheidung dokumentiert sind.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="prompt-vault" class="setup-section" aria-labelledby="prompt-vault-title">
+        <div class="section-heading">
+          <p class="section-kicker">Agenten, Skills, Prompts</p>
+          <h2 id="prompt-vault-title">Der Prompt-Vault liefert Methoden, der Research-Vault hält Wissen.</h2>
+        </div>
+        <div class="setup-layout">
+          <article class="setup-minimum">
+            <h3>Betriebsmodell</h3>
+            <p>Agenten übernehmen Rollen. Skills beschreiben wiederholbare Arbeitsabläufe. Prompts steuern einzelne Schritte. Run Logs dokumentieren Einsatz und Grenze.</p>
+            <dl class="folder-list">
+              <dt>Agent</dt>
+              <dd>Rolle mit Aufgabe, Übergabe und Prüfkriterien.</dd>
+              <dt>Skill</dt>
+              <dd>Wiederholbarer Ablauf mit Eingang und Ausgabe.</dd>
+              <dt>Prompt</dt>
+              <dd>Konkrete Anweisung für einen begrenzten Schritt.</dd>
+            </dl>
+          </article>
+          <div class="setup-steps" aria-label="Prompt-Vault-Verbindung">
+            <article>
+              <span>01</span>
+              <h3>Research Scout</h3>
+              <p>findet Quellen, Trends und offene Fragen.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Source Verifier</h3>
+              <p>prüft Provenienz, Datum, Autor, Quellentyp und Interessenlage.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Claim Extractor</h3>
+              <p>zerlegt Quellen in einzelne prüfbare Aussagen.</p>
+            </article>
+            <article>
+              <span>04</span>
+              <h3>Evidence Checker</h3>
+              <p>sucht Belege, Grenzen und Gegenpositionen.</p>
+            </article>
+            <article>
+              <span>05</span>
+              <h3>Knowledge Curator</h3>
+              <p>verlinkt Konzepte, Dossiers, Quellen und offene Fragen.</p>
+            </article>
+            <article>
+              <span>06</span>
+              <h3>Research Writer</h3>
+              <p>schreibt nur aus geprüften Wissensobjekten.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="rag" class="benefits-section" aria-labelledby="rag-title">
+        <div class="section-heading">
+          <p class="section-kicker">RAG, MCP, Wiki</p>
+          <h2 id="rag-title">Drei technische Ebenen haben unterschiedliche Aufgaben.</h2>
+        </div>
+        <div class="benefits-table" aria-label="Unterschiede zwischen RAG, MCP und Wiki-Schicht">
+          <article>
+            <h3>RAG</h3>
+            <p>holt relevante Quellenstellen für eine konkrete Frage.</p>
+          </article>
+          <article>
+            <h3>MCP</h3>
+            <p>verbindet Agenten mit Tools, Dateien, Ressourcen und Diensten.</p>
+          </article>
+          <article>
+            <h3>Wiki-Schicht</h3>
+            <p>speichert verdichtetes Wissen dauerhaft als Quellen, Claims, Konzepte und Dossiers.</p>
+          </article>
+          <article>
+            <h3>Prüffrage</h3>
+            <p>Welche Quelle wurde gefunden?</p>
+          </article>
+          <article>
+            <h3>Prüffrage</h3>
+            <p>Welche Berechtigung und welches Tool wurden genutzt?</p>
+          </article>
+          <article>
+            <h3>Prüffrage</h3>
+            <p>Welche Aussage ist nach Gegenprüfung tragbar?</p>
           </article>
         </div>
       </section>
 
       <section id="lehre" class="band" aria-labelledby="teaching-title">
         <div class="section-heading">
-          <p class="section-kicker">Lehre</p>
-          <h2 id="teaching-title">Was Studierende daran üben können</h2>
+          <p class="section-kicker">Lehre und Dissertation</p>
+          <h2 id="teaching-title">Was damit geübt wird</h2>
         </div>
         <div class="use-grid">
           <article>
-            <h3>Recherchekompetenz</h3>
-            <p>Suchbegriffe, Korpusgrenzen und Quellenstatus werden explizit formuliert.</p>
+            <h3>Literaturreview</h3>
+            <p>Suchachsen, Screening, Quellenstatus, Evidenzmatrix und offene Lücken werden dokumentiert.</p>
           </article>
           <article>
-            <h3>Quellenkritik</h3>
-            <p>Zusammenfassung, Originalquelle und Gegenposition werden verglichen.</p>
+            <h3>Theoriebildung</h3>
+            <p>Begriffe, Gegenbegriffe, Theoriebezüge und Grenzfälle bleiben verlinkt.</p>
           </article>
           <article>
-            <h3>Wissenschaftliches Schreiben</h3>
-            <p>Aussagen werden mit Quelle, Evidenzgrenze und Unsicherheit verbunden.</p>
+            <h3>Schreibprozess</h3>
+            <p>Draft, Fact Check, Quellenkettencheck und Stilprüfung sind getrennte Schritte.</p>
           </article>
         </div>
       </section>
 
       <section class="review-strip" aria-label="Leitsatz zur fachlichen Prüfung">
         <blockquote>
-          <span>Das System bereitet Recherche vor.</span>
-          <strong>Die fachliche Entscheidung bleibt menschlich.</strong>
+          <span>Das System darf vorbereiten.</span>
+          <strong>Die Freigabe bleibt fachliche Verantwortung.</strong>
         </blockquote>
       </section>
 
-      <section id="demo" class="demo-section" aria-labelledby="demo-title">
+      <section id="auftrag" class="demo-section" aria-labelledby="auftrag-title">
         <div class="section-heading">
           <p class="section-kicker">Rechercheauftrag</p>
-          <h2 id="demo-title">Ein Beispielauftrag für einen Recherchelauf</h2>
+          <h2 id="auftrag-title">Ein Auftrag für einen sauberen Research-Lauf</h2>
         </div>
         <div class="prompt-box">
-          <pre><code>Thema: [eigene Fragestellung]
-Kontext: [Seminar / Forschungsprojekt / Lehrveranstaltung]
-Korpus: [eigene PDFs, Notizen, Links, Datenbanken, Kursmaterialien]
-Rhythmus: [einmalig / wöchentlich / vor jeder Sitzung]
-Ausgabe: [Recherche-Notiz / Quellenkarte / Aussage-Evidenz-Matrix / offene Fragen]
+          <pre><code>Thema:
+[eigene Forschungsfrage]
+
+Kontext:
+[Seminar / Dissertation / Intranet / Lehrmaterial / Projekt]
+
+Korpus:
+[PDFs, Quellenkarten, Notizen, Links, Datenbankexporte]
 
 Aufgabe:
-1. Zerlege die Frage in Teilfragen und Suchachsen.
-2. Nutze den angegebenen Korpus; markiere externe Ergänzungen.
-3. Extrahiere Kernaussagen, Methoden, Begriffe, Beispiele und mögliche Aussagekandidaten.
-4. Trenne Signal, Interpretation und Evidenz.
-5. Suche Gegenpositionen, Lücken und methodische Unsicherheiten.
-6. Vergib Quellenstatus, Evidenztyp und Relevanz.
-7. Erstelle eine Prüfliste: übernehmen / genauer lesen / beobachten / verwerfen.
-8. Schreibe den Arbeitsstand mit Quellenbezug zurück; setze den Status auf ungeprüft, bis die fachliche Prüfung erfolgt.</code></pre>
-          <button class="copy-button" type="button" data-copy>Prompt kopieren</button>
+1. Grenze Frage, Suchraum und Ausschlüsse.
+2. Lege Suchachsen und Gegenpositionen an.
+3. Erstelle Source Cards mit Autor, Datum, URL, Quellentyp und Interessenlage.
+4. Extrahiere einzelne Claims mit Belegstelle.
+5. Trenne Signal, Interpretation und Evidenz.
+6. Suche Gegenbelege, schwache Evidenz, Vendor Claims und Zitationsschleifen.
+7. Vergib Status: inbox, scoping, signal, evidence-linked, evidence-checked oder claim-ready.
+8. Aktualisiere Dossier, offene Fragen und nächste Prüfschritte.
+
+Ausgabe:
+- Source Cards
+- Claim Cards
+- Review Note
+- Dossier Update
+- Entscheidungsliste</code></pre>
+          <button class="copy-button" type="button" data-copy>Auftrag kopieren</button>
         </div>
       </section>
 
       <section class="closing-section" aria-labelledby="closing-title">
-        <h2 id="closing-title">Ablage nach Prüfung</h2>
+        <h2 id="closing-title">Nutzbar wird das System durch Pflege.</h2>
         <p>
-          Nutzbar wird der Lauf durch die geprüfte Ablage: Quelle, Befund, Grenze, Status und nächste Entscheidung bleiben zusammen.
+          Ein guter Lauf endet nicht mit einer Antwort. Er endet mit einem aktualisierten Wissensraum: Quellen, Claims, Grenzen, Gegenpositionen, Dossiers und nächsten Fragen.
         </p>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>Agentic Research · Individuelle Recherche, Quellenkritik und wissenschaftliches Arbeiten</p>
+      <p>Agentic Research · Quellenkritik, Evidenzprüfung, Wissensaufbau und wissenschaftliches Arbeiten</p>
     </footer>
 
     <script src="script.js"></script>
