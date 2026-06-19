@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Automatisches Researchsystem</title>
-    <meta name="description" content="HTML-Präsentation zu automatischen Researchsystemen, wissenschaftlichem Arbeiten, Evidenzprüfung, Skills und Prompt-Vault.">
+    <meta name="description" content="Anleitung zum Einrichten eines automatischen Researchsystems mit Vault, Tools, Prompts, Templates und wiederkehrendem Lauf.">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -12,8 +12,10 @@
       <a class="brand" href="#top" aria-label="Startseite">Researchsystem</a>
       <nav class="nav" aria-label="Seitennavigation">
         <a href="#ueberblick">Überblick</a>
+        <a href="#schnellstart">Schnellstart</a>
         <a href="#einrichtung">Einrichtung</a>
         <a href="#bauteile">Bauteile</a>
+        <a href="#namensregeln">Dateien</a>
         <a href="#tools">Tools</a>
         <a href="#alternativen">Alternativen</a>
         <a href="#workflow">Workflow</a>
@@ -30,16 +32,65 @@
           <p class="context-line">Research-Systeme · wissenschaftliches Arbeiten · KI</p>
           <h1 id="page-title">Automatisches Researchsystem</h1>
           <p class="lead">
-            Das System hilft beim Sammeln, Ordnen und Prüfen von Research-Material. Es legt Quellen, Aussagen, Dossiers und Aufgaben im Vault ab.
+            Die Anleitung zeigt, wie ein Vault angelegt wird, welche Tools verbunden werden und welche Prompts den Research-Lauf steuern.
           </p>
           <div class="action-row" aria-label="Navigation im Inhalt">
-            <a class="button primary" href="#einrichtung">Einrichtung</a>
+            <a class="button primary" href="#schnellstart">Schnellstart</a>
             <a class="button secondary" href="#auftrag">Prompt kopieren</a>
           </div>
         </div>
         <figure class="workflow-figure">
           <img src="assets/agentic-research-loop.svg" alt="Kreislauf aus Frage, Plan, Quellen, Analyse, Kritik, Synthese, Prüfung und Wissensspeicher">
         </figure>
+      </section>
+
+      <section id="schnellstart" class="process-section" aria-labelledby="quickstart-title">
+        <div class="section-heading">
+          <p class="section-kicker">Schnellstart</p>
+          <h2 id="quickstart-title">Diese Reihenfolge richtet das System ein.</h2>
+        </div>
+        <div class="process-map" aria-label="Schnellstart für die Einrichtung">
+          <div>
+            <span>01</span>
+            <h3>Speicherort wählen</h3>
+            <p>Wähle Google Drive, OneDrive, GitHub, Obsidian Sync oder einen lokalen Ordner mit Backup.</p>
+          </div>
+          <div>
+            <span>02</span>
+            <h3>Vault anlegen</h3>
+            <p>Erstelle in Obsidian einen Vault oder nutze einen Markdown-Ordner als Vault.</p>
+          </div>
+          <div>
+            <span>03</span>
+            <h3>Ordner erstellen</h3>
+            <p>Erstelle 00_Inbox, 01_Quellen, 02_Claims, 03_Dossiers, 04_Review, 05_Output, prompts und templates.</p>
+          </div>
+          <div>
+            <span>04</span>
+            <h3>Plugins aktivieren</h3>
+            <p>Aktiviere Backlinks, Daily Notes, Outline, Tags, Templates und Graph View.</p>
+          </div>
+          <div>
+            <span>05</span>
+            <h3>Vorlagen anlegen</h3>
+            <p>Lege source_card.md, claim_card.md, dossier.md, daily_note.md, meeting_note.md und output_note.md in templates ab.</p>
+          </div>
+          <div>
+            <span>06</span>
+            <h3>Prompts anlegen</h3>
+            <p>Lege research_lauf.md, source_card.md, claim_card.md, review.md, dossier_update.md, weekly_refresh.md und output_draft.md in prompts ab.</p>
+          </div>
+          <div>
+            <span>07</span>
+            <h3>Testlauf starten</h3>
+            <p>Lege drei Quellen in 00_Inbox und starte prompts/research_lauf.md.</p>
+          </div>
+          <div>
+            <span>08</span>
+            <h3>Run Log führen</h3>
+            <p>Schreibe Datum, Eingaben, erzeugte Dateien und offene Aufgaben in 04_Review/run_log.md.</p>
+          </div>
+        </div>
       </section>
 
       <section id="ueberblick" class="band" aria-labelledby="overview-title">
@@ -171,6 +222,27 @@
               <h3>Outputs</h3>
               <p>Intranet-Texte, Lehrmaterial, Reports, Vortragsnotizen und Publikationen.</p>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="namensregeln" class="band" aria-labelledby="naming-title">
+        <div class="section-heading">
+          <p class="section-kicker">Dateien und Links</p>
+          <h2 id="naming-title">Diese Regeln halten den Vault lesbar.</h2>
+        </div>
+        <div class="use-grid">
+          <div>
+            <h3>Dateinamen</h3>
+            <p>Nutze Datum, Typ und Kurzname: 2026-06-19_source_openai_agents.md oder 2026-06-19_claim_research_lauf.md.</p>
+          </div>
+          <div>
+            <h3>Interne Links</h3>
+            <p>Verlinke Quellen, Claims und Dossiers mit [[Dateiname]]. Setze Links direkt in die jeweilige Karte.</p>
+          </div>
+          <div>
+            <h3>Status-Tags</h3>
+            <p>Nutze #inbox, #scoping, #signal, #evidence-linked, #evidence-checked und #claim-ready.</p>
           </div>
         </div>
       </section>
