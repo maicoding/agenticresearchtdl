@@ -18,6 +18,9 @@
         <a href="#namensregeln">Dateien</a>
         <a href="#tools">Tools</a>
         <a href="#alternativen">Alternativen</a>
+        <a href="#erweiterungen">Erweiterungen</a>
+        <a href="#dataview">Dataview</a>
+        <a href="#templater">Templater</a>
         <a href="#workflow">Workflow</a>
         <a href="#status">Status</a>
         <a href="#prompt-vault">Prompt-Vault</a>
@@ -321,6 +324,211 @@
           <div>
             <h3>Synchronisation</h3>
             <p>Google Drive, OneDrive, iCloud, Git, Obsidian Sync oder lokaler Ordner mit Backup.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="erweiterungen" class="setup-section" aria-labelledby="extensions-title">
+        <div class="section-heading">
+          <p class="section-kicker">Erweiterungen</p>
+          <h2 id="extensions-title">Diese Erweiterungen können ergänzt werden.</h2>
+        </div>
+        <div class="setup-layout">
+          <div class="setup-minimum">
+            <h3>Plugin-Liste</h3>
+            <p>Lege die aktiven Plugins in README.md oder AGENT.md ab. Notiere Zweck, Ordner und Ausgabe.</p>
+            <dl class="folder-list">
+              <dt>Dataview</dt>
+              <dd>Tabellen für Quellen, Claims, Dossiers, Aufgaben und Run Logs</dd>
+              <dt>Templater</dt>
+              <dd>Vorlagen mit Datum, Titel, Status und Zielordner</dd>
+              <dt>Canvas</dt>
+              <dd>Karten für Dossiers, Argumente, Projekte und Onboarding</dd>
+              <dt>Tasks</dt>
+              <dd>Aufgaben aus Review Notes, Daily Notes und Run Logs</dd>
+              <dt>QuickAdd</dt>
+              <dd>Schnelle Erfassung von Quelle, Claim, Meeting oder Idee</dd>
+              <dt>Periodic Notes</dt>
+              <dd>Daily, Weekly, Monthly und Yearly Notes</dd>
+            </dl>
+          </div>
+          <div class="setup-steps" aria-label="Erweiterungen einrichten">
+            <div>
+              <span>01</span>
+              <h3>Plugin aktivieren</h3>
+              <p>Installiere das Plugin und notiere die Funktion im Vault.</p>
+            </div>
+            <div>
+              <span>02</span>
+              <h3>Ordner zuweisen</h3>
+              <p>Lege fest, welche Ordner das Plugin liest und schreibt.</p>
+            </div>
+            <div>
+              <span>03</span>
+              <h3>Ausgabe prüfen</h3>
+              <p>Prüfe, welche Dateien, Tabellen, Aufgaben oder Links entstehen.</p>
+            </div>
+            <div>
+              <span>04</span>
+              <h3>Run Log ergänzen</h3>
+              <p>Trage neue Abfragen, Automationen und offene Aufgaben ins Run Log ein.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="dataview" class="band" aria-labelledby="dataview-title">
+        <div class="section-heading">
+          <p class="section-kicker">Dataview</p>
+          <h2 id="dataview-title">Diese Abfragen erzeugen Übersichten.</h2>
+        </div>
+        <div class="comparison-grid">
+          <div>
+            <h3>Offene Claims</h3>
+            <p>Liste alle Claim Cards mit Status #signal oder #evidence-linked.</p>
+            <pre><code>TABLE status, source, review
+FROM "02_Claims"
+WHERE status != "claim-ready"
+SORT file.mtime DESC</code></pre>
+          </div>
+          <div>
+            <h3>Quellen ohne Review</h3>
+            <p>Liste Quellenkarten ohne verknüpfte Review Note.</p>
+            <pre><code>TABLE type, author, date
+FROM "01_Quellen"
+WHERE !review
+SORT date DESC</code></pre>
+          </div>
+          <div>
+            <h3>Dossiers mit offenen Fragen</h3>
+            <p>Liste Dossiers mit offenen Aufgaben oder Review-Fragen.</p>
+            <pre><code>TABLE topic, open_questions
+FROM "03_Dossiers"
+WHERE open_questions
+SORT file.mtime DESC</code></pre>
+          </div>
+          <div>
+            <h3>Verwaiste Notizen</h3>
+            <p>Liste Dateien ohne eingehende Links.</p>
+            <pre><code>TABLE file.folder
+WHERE length(file.inlinks) = 0
+SORT file.folder ASC</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section id="templater" class="benefits-section" aria-labelledby="templater-title">
+        <div class="section-heading">
+          <p class="section-kicker">Templater und QuickAdd</p>
+          <h2 id="templater-title">Diese Vorlagen legen Dateien mit Feldern an.</h2>
+        </div>
+        <div class="benefits-table" aria-label="Templater und QuickAdd Vorlagen">
+          <div>
+            <h3>Neue Quelle</h3>
+            <p>Fragt Titel, Autor, URL und Quellentyp ab. Legt Datei in 01_Quellen an.</p>
+          </div>
+          <div>
+            <h3>Neuer Claim</h3>
+            <p>Fragt Aussage, Quelle, Belegstelle und Status ab. Legt Datei in 02_Claims an.</p>
+          </div>
+          <div>
+            <h3>Review Note</h3>
+            <p>Fragt Claim, Beleg, Gegenbeleg und offene Frage ab. Legt Datei in 04_Review an.</p>
+          </div>
+          <div>
+            <h3>Dossier Update</h3>
+            <p>Fragt Thema, neue Claims, offene Fragen und Links ab. Aktualisiert 03_Dossiers.</p>
+          </div>
+          <div>
+            <h3>Daily Capture</h3>
+            <p>Erfasst neue Quellen, Ideen, Aufgaben und Links in der Daily Note.</p>
+          </div>
+          <div>
+            <h3>Meeting Note</h3>
+            <p>Erfasst Datum, Teilnehmende, Entscheidungen, Aufgaben und Projektlinks.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="canvas" class="setup-section" aria-labelledby="canvas-title">
+        <div class="section-heading">
+          <p class="section-kicker">Canvas und Karten</p>
+          <h2 id="canvas-title">Diese Ansichten können im Vault angelegt werden.</h2>
+        </div>
+        <div class="setup-steps" aria-label="Canvas-Ansichten">
+          <div>
+            <span>01</span>
+            <h3>Dossier Canvas</h3>
+            <p>Verknüpfe Thema, Quellen, Claims, Review Notes und offene Fragen.</p>
+          </div>
+          <div>
+            <span>02</span>
+            <h3>Argument Map</h3>
+            <p>Lege Claim, Belege, Gegenbelege, Grenzen und Status als Karten an.</p>
+          </div>
+          <div>
+            <span>03</span>
+            <h3>Projekt Canvas</h3>
+            <p>Zeige aktive Dossiers, nächste Aufgaben, Output-Entwürfe und Run Logs.</p>
+          </div>
+          <div>
+            <span>04</span>
+            <h3>Onboarding Canvas</h3>
+            <p>Zeige Ordner, Prompts, Templates, Statusmodell und Zuständigkeiten.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="daily-workflow" class="band" aria-labelledby="daily-title">
+        <div class="section-heading">
+          <p class="section-kicker">Daily Notes</p>
+          <h2 id="daily-title">Daily Notes dienen als Erfassung und Tageslog.</h2>
+        </div>
+        <div class="use-grid">
+          <div>
+            <h3>Capture</h3>
+            <p>Neue Quellen, Links, Fragen und Aufgaben werden in der Daily Note gesammelt.</p>
+          </div>
+          <div>
+            <h3>Verarbeitung</h3>
+            <p>Ein täglicher oder wöchentlicher Lauf verschiebt Einträge in Quellen, Claims, Dossiers oder Review.</p>
+          </div>
+          <div>
+            <h3>Rollup</h3>
+            <p>Weekly Notes verlinken Daily Notes, neue Quellen, offene Fragen und erledigte Aufgaben.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="agenten-zugriff" class="benefits-section" aria-labelledby="agent-access-title">
+        <div class="section-heading">
+          <p class="section-kicker">Agentenzugriff</p>
+          <h2 id="agent-access-title">Der Agent braucht klare Lese- und Schreibbereiche.</h2>
+        </div>
+        <div class="benefits-table" aria-label="Agentenzugriff einrichten">
+          <div>
+            <h3>Lesen</h3>
+            <p>00_Inbox, 01_Quellen, 02_Claims, 03_Dossiers, 04_Review und prompts.</p>
+          </div>
+          <div>
+            <h3>Schreiben</h3>
+            <p>01_Quellen, 02_Claims, 03_Dossiers, 04_Review und 05_Output.</p>
+          </div>
+          <div>
+            <h3>Run Log</h3>
+            <p>Jeder Lauf schreibt Eingaben, Ausgaben, geänderte Dateien und offene Aufgaben.</p>
+          </div>
+          <div>
+            <h3>MCP</h3>
+            <p>Filesystem MCP oder ein anderer Dateizugriff verbindet Agent und Vault-Ordner.</p>
+          </div>
+          <div>
+            <h3>Versionierung</h3>
+            <p>Git speichert Änderungen an Prompts, Templates, Claims, Dossiers und Outputs.</p>
+          </div>
+          <div>
+            <h3>Export</h3>
+            <p>Freigegebene Dateien werden in 05_Output oder einen Publish-Ordner kopiert.</p>
           </div>
         </div>
       </section>
